@@ -5,8 +5,8 @@
     <meta charset="utf-8" />
     <title>Display a map</title>
     <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
-    <script src="../assets/js/maplibre-gl.js"></script>
-    <link href="../assets/js/maplibre-gl.css" rel="stylesheet" />
+    <script src='https://unpkg.com/maplibre-gl@1.15.2/dist/maplibre-gl.js'></script>
+    <link href='https://unpkg.com/maplibre-gl@1.15.2/dist/maplibre-gl.css' rel='stylesheet' />
     <style>
         body {
             margin: 0;
@@ -27,7 +27,7 @@
     <script>
 
         var urlParams = new URLSearchParams(window.location.search);
-        var key = urlParams.get('key');
+        var key = urlParams.get('key') || 'get_your_own_OpIi9ZULNHzrESv6T2vL';
 
         var map = new maplibregl.Map({
             container: 'map', // container id
