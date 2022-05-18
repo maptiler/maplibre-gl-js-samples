@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="utf-8" />
-    <title>Display a map</title>
+    <title>Display a GeoJSON Layer</title>
     <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
-    <script src="../assets/js/maplibre-gl.js"></script>
-    <link href="../assets/js/maplibre-gl.css" rel="stylesheet" />
+    <script src="https://cdn.maptiler.com/maplibre-gl-js/v2.2.0-pre.2/maplibre-gl.js"></script>
+    <link href="https://cdn.maptiler.com/maplibre-gl-js/v2.2.0-pre.2/maplibre-gl.css" rel="stylesheet" />
     <style>
         body {
             margin: 0;
@@ -21,21 +20,17 @@
         }
     </style>
 </head>
-
 <body>
     <div id="map"></div>
     <script>
-
-        var urlParams = new URLSearchParams(window.location.search);
-        var key = urlParams.get('key');
-
-        var map = new maplibregl.Map({
+        const urlParams = new URLSearchParams(window.location.search);
+        const key = urlParams.get('key') || 'YOUR_MAPTILER_API_KEY_HERE';
+        const map = new maplibregl.Map({
             container: 'map', // container id
             style: `https://api.maptiler.com/maps/streets/style.json?key=${key}`, // style URL
             center: [-68.13734351262877, 45.137451890638886],
             zoom: 5
         });
-
         map.on('load', function () {
             map.addSource('maine', {
                 'type': 'geojson',
@@ -69,8 +64,7 @@
                         ]
                     }
                 }
-            });
-            
+            });         
             map.addLayer({
                 'id': 'maine',
                 'type': 'fill',
@@ -81,9 +75,10 @@
                     'fill-opacity': 0.8
                 }
             });
-        });        
+        });
+        map.on('error', function(err) {
+            throw new Error("To load the map, you must replace YOUR_MAPTILER_API_KEY_HERE first, see README");
+        });     
     </script>
-
 </body>
-
 </html>

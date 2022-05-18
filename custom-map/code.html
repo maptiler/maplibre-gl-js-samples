@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="utf-8" />
-    <title>Display a map</title>
+    <title>Display a custom map</title>
     <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
-    <script src="../assets/js/maplibre-gl.js"></script>
-    <link href="../assets/js/maplibre-gl.css" rel="stylesheet" />
+    <script src="https://cdn.maptiler.com/maplibre-gl-js/v2.2.0-pre.2/maplibre-gl.js"></script>
+    <link href="https://cdn.maptiler.com/maplibre-gl-js/v2.2.0-pre.2/maplibre-gl.css" rel="stylesheet" />
     <style>
         body {
             margin: 0;
@@ -21,27 +20,20 @@
         }
     </style>
 </head>
-
 <body>
     <div id="map"></div>
     <script>
-
         var urlParams = new URLSearchParams(window.location.search);
-        var key = urlParams.get('key');
-
+        var key = urlParams.get('key') || 'YOUR_MAPTILER_API_KEY_HERE';
         var map = new maplibregl.Map({
             container: 'map', // container id
             style: `https://api.maptiler.com/maps/edfae2f8-61b6-4bd2-8d27-28c8c8301786/style.json?key=${key}`, // style URL
-            center: [11, 46.92], // starting position [lng, lat]
-            zoom: 9 // starting zoom
+            center: [10.989249486220501, 46.948652944430734], // starting position [lng, lat]
+            zoom: 11 // starting zoom
         });
-
-        map.fitBounds([
-            [10.91279724, 46.91076825],
-            [11.02306368, 46.98484291]
-        ]);
-
+        map.on('error', function(err) {
+            throw new Error("To load the map, you must replace YOUR_MAPTILER_API_KEY_HERE first, see README");
+        });
     </script>
 </body>
-
 </html>

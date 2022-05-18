@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Display a 3D Map</title>
+  <script src="https://cdn.maptiler.com/maplibre-gl-js/v2.2.0-pre.2/maplibre-gl.js"></script>
+  <link href="https://cdn.maptiler.com/maplibre-gl-js/v2.2.0-pre.2/maplibre-gl.css" rel="stylesheet" />
+  <style>
+    body { 
+      margin: 0; 
+      padding: 0;
+    }
+
+    #map { 
+      position: absolute; 
+      top: 0; 
+      bottom: 0; 
+      width: 100%; 
+    }
+  </style>
+</head>
+<body>
+  <div id="map"></div>
+  <script>
+      const urlParams = new URLSearchParams(window.location.search);
+      const key = urlParams.get('key') || 'YOUR_MAPTILER_API_KEY_HERE';      
+      const map = new maplibregl.Map({
+        container: 'map', // container id
+        style: `https://api.maptiler.com/maps/outdoor/style.json?key=${key}`, // style URL
+        center: [6.85684, 45.83595], // starting position [lng, lat]
+        zoom: 14, // starting zoom
+        pitch: 61,
+        bearing: 172,
+        maxPitch: 85,
+        maxZoom: 14
+      });
+      map.on('load', () => {
+        map.addSource("terrain", {
+          "type": "raster-dem",
+          "url": `https://api.maptiler.com/tiles/terrain-rgb/tiles.json?key=${key}`
+        });
+        map.setTerrain({
+          source: "terrain"
+        });
+      });
+      map.on('error', function(err) {
+        throw new Error("To load the map, you must replace YOUR_MAPTILER_API_KEY_HERE first, see README");
+      });
+  </script>
+</body>
+</html>
