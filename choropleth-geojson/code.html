@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Display a choropleth Map from GeoJSON</title>
+  <script src="https://cdn.maptiler.com/maplibre-gl-js/v2.2.0-pre.2/maplibre-gl.js"></script>
+  <link href="https://cdn.maptiler.com/maplibre-gl-js/v2.2.0-pre.2/maplibre-gl.css" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    #map {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+    }
+    .legend {
+        background-color: #000;
+        border-radius: 3px;
+        bottom: 30px;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+        color: #fff ;
+        font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+        padding: 10px;
+        position: absolute;
+        right: 10px;
+        z-index: 1;
+    }
+    .legend h4 {
+        margin: 0 0 10px;
+    }
+    .legend div span {
+        border-radius: 50%;
+        display: inline-block;
+        height: 10px;
+        margin-right: 5px;
+        width: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div id="map"></div>
+  <div id="state-legend" class="legend">
+    <h4>Mean age of </br> women at first marriage </h4>
+      <div><span style="background-color: #fff5eb"></span>23</div>
+      <div><span style="background-color: #fee6ce"></span>24</div>
+      <div><span style="background-color: #fdd0a2"></span>25</div>
+      <div><span style="background-color: #fdae6b"></span>26</div>
+      <div><span style="background-color: #fd8d3c"></span>27</div>
+      <div><span style="background-color: #f16913"></span>28</div>
+      <div><span style="background-color: #d94801"></span>29</div>
+      <div><span style="background-color: #8c2d04"></span>30</div>
+  </div>
+  <script>
+      const key = 'YOUR_MAPTILER_API_KEY_HERE';
+      const map = new maplibregl.Map({
+        container: 'map', // container id
+        style: `https://api.maptiler.com/maps/streets/style.json?key=${key}`, // style URL
+        center: [13.39, 52.51], // starting position [lng, lat]
+        zoom: 2, // starting zoom
+      });
+      map.on('load', function() {
+        map.addSource('age', {
+          'type': 'geojson',
+          'data': `https://api.maptiler.com/data/YOUR_CUSTOM_MAP_ID/features.json?key=${key}`
+        });
+
+        // Find the id of the first symbol layer in the map style
+        const layers = map.getStyle().layers;
+        let firstSymbolId;
+        for (let i = 0; i < layers.length; i++) {
+          if (layers[i].type === 'symbol') {
+            firstSymbolId = layers[i].id;
+            break;
+          }
+        }
+
+        map.addLayer(
+          {
+            'id': 'IDage',
+            'source': 'age',
+            'type': 'fill',
+            'paint': {
+              'fill-color': [
+                  'interpolate',
+                  ['linear'],
+                  ['get', 'age'],
+                  23.0,
+                  '#fff5eb',
+                  24.0,
+                  '#fee6ce',
+                  25.0,
+                  '#fdd0a2',
+                  26.0,
+                  '#fdae6b',
+                  27.0,
+                  '#fd8d3c',
+                  28.0,
+                  '#f16913',
+                  29.0,
+                  '#d94801',
+                  30.0,
+                  '#8c2d04'
+                ],
+                'fill-opacity': 1,
+                'fill-outline-color': '#000'
+            }
+          },
+          firstSymbolId   
+        );
+
+        map.on('click', 'IDage', function (e) {
+          new maplibregl.Popup()
+            .setLngLat(e.lngLat)
+            .setHTML(`<h3>Average age of </br> women at first marriage</h3><p>${e.features[0].properties.age}</p>`)
+            .addTo(map);
+        });
+
+        // Change the cursor to a pointer when the mouse is over the layer.
+        map.on('mouseenter', 'IDage', function () {
+            map.getCanvas().style.cursor = 'pointer';
+        });
+
+        // Change it back to a pointer when it leaves.
+        map.on('mouseleave', 'IDage', function () {
+            map.getCanvas().style.cursor = '';
+        });
+      });
+  </script>
+</body>
+</html>
