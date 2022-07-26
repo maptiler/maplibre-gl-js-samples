@@ -23,9 +23,8 @@
 <body>
     <div id="map"></div>
     <script>
-        var urlParams = new URLSearchParams(window.location.search);
-        var key = urlParams.get('key') || 'YOUR_MAPTILER_API_KEY_HERE';
-        var map = new maplibregl.Map({
+        const key = 'YOUR_MAPTILER_API_KEY_HERE';
+        const map = new maplibregl.Map({
             container: 'map', // container id
             style: `https://api.maptiler.com/maps/edfae2f8-61b6-4bd2-8d27-28c8c8301786/style.json?key=${key}`, // style URL
             center: [10.989249486220501, 46.948652944430734], // starting position [lng, lat]
