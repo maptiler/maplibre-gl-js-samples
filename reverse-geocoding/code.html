@@ -73,17 +73,6 @@
             }
         });
         map.addLayer({
-            'id': 'line-result',
-            'type': 'line',
-            'source': 'search-results',
-            'paint': {
-                'line-color': '#B42222',
-                'line-width': 5,
-                'line-opacity': 0.5
-            },
-            'filter': ['==', '$type', 'LineString']
-        });
-        map.addLayer({
             'id': 'point-result',
             'type': 'circle',
             'source': 'search-results',
