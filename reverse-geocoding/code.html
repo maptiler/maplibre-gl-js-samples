@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reverse Geocoding</title>
+  <script src="https://cdn.maptiler.com/maplibre-gl-js/v2.2.0-pre.2/maplibre-gl.js"></script>
+  <link href="https://cdn.maptiler.com/maplibre-gl-js/v2.2.0-pre.2/maplibre-gl.css" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    #map {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+    }
+    #results {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 30%;
+      overflow: auto;
+      background: rgba(255, 255, 255, 0.8);
+    }
+    #results ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+    #results ul li {
+      padding: 10px;
+      cursor: pointer;
+      border-bottom: 1px solid gray;
+    }
+    #results ul li:hover {
+      color: gray;
+    }
+    #results ul li:last-child{
+      border-bottom-width: 0;
+    }
+  </style>
+</head>
+<body>
+  <div id="map"></div>
+  <div id="results">
+    <ul id="search-results">
+    </ul>
+  </div>
+  <script>
+      const key = 'YOUR_MAPTILER_API_KEY_HERE';
+      const queryForPlaces = async (lngLat) => {
+        const response = await fetch(`https://api.maptiler.com/geocoding/${lngLat.lng},${lngLat.lat}.json?key=${key}`);
+        const data = await response.json();
+        return data;
+      }
+      const map = new maplibregl.Map({
+        container: 'map', // container id
+        style: `https://api.maptiler.com/maps/streets/style.json?key=${key}`, // style URL
+        center: [16.62662018, 49.2125578], // starting position [lng, lat]
+        zoom: 14, // starting zoom
+      });
+      map.addControl(new maplibregl.NavigationControl(), 'top-left');
+      map.on('load', () => {
+        map.addSource('search-results', {
+            type: 'geojson',
+            data: {
+                "type": "FeatureCollection",
+                "features": []
+            }
+        });
+        map.addLayer({
+            'id': 'line-result',
+            'type': 'line',
+            'source': 'search-results',
+            'paint': {
+                'line-color': '#B42222',
+                'line-width': 5,
+                'line-opacity': 0.5
+            },
+            'filter': ['==', '$type', 'LineString']
+        });
+        map.addLayer({
+            'id': 'point-result',
+            'type': 'circle',
+            'source': 'search-results',
+            'paint': {
+                'circle-radius': 8,
+                'circle-color': '#B42222',
+                'circle-opacity': 0.5
+            },
+            'filter': ['==', '$type', 'Point']
+        });
+      });
+      map.on('click', async (e) => {
+        const results = await queryForPlaces(e.lngLat);
+        const map = e.target;
+        map.getSource('search-results').setData(results);
+        const bounds = results.features.reduce(function (bounds, feature) {
+            return bounds.extend(feature.bbox);
+        }, new maplibregl.LngLatBounds(results.features[0].bbox));
+        map.fitBounds(bounds);
+        const resultList = results.features.map((feature) => {
+          return `<li onClick="map.fitBounds([${feature.bbox}], {maxZoom: 19})">${feature.place_name}</li>`
+        });
+        document.getElementById('search-results').innerHTML = resultList.join('');
+      });
+  </script>
+</body>
+</html>
