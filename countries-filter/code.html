@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Display a US states map</title>
+  <script src="https://cdn.maptiler.com/maplibre-gl-js/v2.2.0-pre.2/maplibre-gl.js"></script>
+  <link href="https://cdn.maptiler.com/maplibre-gl-js/v2.2.0-pre.2/maplibre-gl.css" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    #map {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div id="map"></div>
+  <script>
+      const key = 'YOUR_MAPTILER_API_KEY_HERE';
+      const map = new maplibregl.Map({
+        container: 'map', // container id
+        style: `https://api.maptiler.com/maps/streets/style.json?key=${key}`, // style URL
+        center: [-94.28, 38.45], // starting position [lng, lat]
+        zoom: 3, // starting zoom
+      });
+      map.addControl(new maplibregl.NavigationControl(), 'top-left');
+      map.on('load', function() {
+        map.addSource('statesData', {
+          type: 'vector',
+          url: `https://api.maptiler.com/tiles/countries/tiles.json?key=${key}`
+        });
+
+        // Find the id of the first symbol layer in the map style
+        const layers = map.getStyle().layers;
+        let firstSymbolId;
+        for (let i = 0; i < layers.length; i++) {
+          if (layers[i].type === 'symbol') {
+            firstSymbolId = layers[i].id;
+            break;
+          }
+        }
+
+        map.addLayer(
+          {
+            'id': 'US_states',
+            'source': 'statesData',
+            'source-layer': 'administrative',
+            'type': 'fill',
+            'filter': [
+              'all',
+              ['==', 'level', 1],
+              ['==', 'level_0', 'US']
+            ],
+            'paint': {
+                'fill-color': [
+                  "match",
+                  ["get", "name"],
+                  ["Nebraska", "Alaska", "Washington", "Nevada", "New Mexico", "Montana", "Minnesota", "Louisiana", "North Carolina", "Kentucky", "Massachusetts", "Delaware", "Michigan"],
+                  "#D5CD85",
+                  ["Oklahoma", "Florida", "Idaho", "Wisconsin", "Arizona", "Tennessee", "Pennsylvania", "New Hampshire", "Rhode Island"],
+                  "#D58785",
+                  ["New York", "California", "Wyoming", "Kansas", "Illinois", "Mississippi", "South Carolina", "West Virginia"],
+                  "#735F91",
+                  ["Texas", "Georgia", "Utah", "Missouri", "South Dakota", "Ohio", "Maryland", "Vermont"],
+                  "#567986",
+                  ["Colorado", "Oregon", "Alabama", "Indiana", "North Dakota", "Iowa", "Arkansas", "Virginia", "New Jersey", "Maine", "Connecticut"],
+                  "#69A86D",
+                  "rgba(0, 0, 0, 0.5)"
+                ],
+                'fill-opacity': 1,
+                'fill-outline-color': '#000'
+            }
+          },
+          firstSymbolId
+        );
+      });
+  </script>
+</body>
+</html>
