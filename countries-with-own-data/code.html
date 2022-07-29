@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Display a countries choropleth map with your own data</title>
+  <script src="https://cdn.maptiler.com/maplibre-gl-js/v2.2.0-pre.2/maplibre-gl.js"></script>
+  <link href="https://cdn.maptiler.com/maplibre-gl-js/v2.2.0-pre.2/maplibre-gl.css" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    #map {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div id="map"></div>
+  <script>
+      const vizData = {
+        "8":{"name":"Albania","population":2829741},
+        "40":{"name":"Austria","population":8932664},
+        "56":{"name":"Belgium","population":11566041},
+        "100":{"name":"Bulgaria","population":6916548},
+        "191":{"name":"Croatia","population":4036355},
+        "196":{"name":"Cyprus","population":896005},
+        "203":{"name":"Czechia","population":10701777},
+        "208":{"name":"Denmark","population":5840045},
+        "233":{"name":"Estonia","population":1330068},
+        "246":{"name":"Finland","population":5533793},
+        "250":{"name":"France","population":67439599},
+        "276":{"name":"Germany","population":83155031},
+        "300":{"name":"Greece","population":10682547},
+        "348":{"name":"Hungary","population":9730772},
+        "352":{"name":"Iceland","population":368792},
+        "372":{"name":"Ireland","population":5006907},
+        "380":{"name":"Italy","population":59257566},
+        "428":{"name":"Latvia","population":1893223},
+        "438":{"name":"Liechtenstein","population":39055},
+        "440":{"name":"Lithuania","population":2795680},
+        "442":{"name":"Luxembourg","population":634730},
+        "470":{"name":"Malta","population":516100},
+        "499":{"name":"Montenegro","population":620739},
+        "528":{"name":"Netherlands","population":17475415},
+        "578":{"name":"Norway","population":5391369},
+        "616":{"name":"Poland","population":37840001},
+        "620":{"name":"Portugal","population":10298252},
+        "642":{"name":"Romania","population":19186201},
+        "688":{"name":"Serbia","population":6871547},
+        "703":{"name":"Slovakia","population":5459781},
+        "705":{"name":"Slovenia","population":2108977},
+        "724":{"name":"Spain","population":47394223},
+        "752":{"name":"Sweden","population":10379295},
+        "756":{"name":"Switzerland","population":8667088},
+        "792":{"name":"Turkey","population":83614362},
+        "807":{"name":"North Macedonia","population":2068808}
+      };
+      function setStates() {
+        const countries = map.querySourceFeatures('statesData', {
+          sourceLayer: 'administrative',
+          filter: ['all', ['==', 'level', 0]],
+        });
+        countries.forEach(country => {
+          if(country.id && vizData[country.id]) {
+            map.setFeatureState({
+              source: 'statesData',
+              sourceLayer: 'administrative',
+              id: country.id
+            }, {
+              population: vizData[country.id].population
+            });
+          }
+        });
+        if (countries.length !== 0) {
+          map.off('data', afterLoad);
+        }
+      }
+      function afterLoad() {
+        if (map.getSource('statesData') && map.isSourceLoaded('statesData')) {
+          setStates();
+        }
+      }
+      const key = 'YOUR_MAPTILER_API_KEY_HERE';
+      const map = new maplibregl.Map({
+        container: 'map', // container id
+        style: `https://api.maptiler.com/maps/streets/style.json?key=${key}`, // style URL
+        center: [13.39, 52.51], // starting position [lng, lat]
+        zoom: 2, // starting zoom
+      });
+      map.addControl(new maplibregl.NavigationControl(), 'top-left');
+      map.on('load', function() {
+        map.addSource('statesData', {
+          type: 'vector',
+          url: `https://api.maptiler.com/tiles/countries/tiles.json?key=${key}`
+        });
+
+        // Find the id of the first symbol layer in the map style
+        const layers = map.getStyle().layers;
+        let firstSymbolId;
+        for (let i = 0; i < layers.length; i++) {
+          if (layers[i].type === 'symbol') {
+            firstSymbolId = layers[i].id;
+            break;
+          }
+        }
+
+        map.addLayer(
+          {
+            'id': 'countries',
+            'source': 'statesData',
+            'source-layer': 'administrative',
+            'type': 'fill',
+            'filter': ['==', 'level', 0],
+            'paint': {
+                'fill-color': ['case',
+                  ['!=', ['to-number', ['feature-state', 'population']], 0],
+                  ['interpolate', ['linear'], ['feature-state', 'population'], 
+                    5000000, 'rgba(222,235,247,1)', 90000000, 'rgba(49,130,189,1)'
+                  ],
+                  'rgba(0, 0, 0, 0)'
+                ],
+                'fill-opacity': 1,
+                'fill-outline-color': '#000'
+            }
+          },
+          firstSymbolId
+        );
+      });
+      map.on('data', afterLoad);
+      map.on('click', 'countries', function (e) {
+        new maplibregl.Popup()
+          .setLngLat(e.lngLat)
+          .setHTML(`<h3>Population</h3><p>${e.features[0].state.population.toLocaleString()}</p>`)
+          .addTo(map);
+      });
+      // Change the cursor to a pointer when the mouse is over the layer.
+      map.on('mouseenter', 'countries', function () {
+          map.getCanvas().style.cursor = 'pointer';
+      });
+
+      // Change it back to a pointer when it leaves.
+      map.on('mouseleave', 'countries', function () {
+          map.getCanvas().style.cursor = '';
+      });
+  </script>
+</body>
+</html>
