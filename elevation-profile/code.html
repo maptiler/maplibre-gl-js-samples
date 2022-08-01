@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Display an elevation profile along a path</title>
+  <script src="https://cdn.maptiler.com/maplibre-gl-js/v2.2.0-pre.2/maplibre-gl.js"></script>
+  <link href="https://cdn.maptiler.com/maplibre-gl-js/v2.2.0-pre.2/maplibre-gl.css" rel="stylesheet" />
+  <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-draw/v1.3.0/mapbox-gl-draw.js"></script>
+  <link href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-draw/v1.3.0/mapbox-gl-draw.css" rel="stylesheet" type="text/css">
+  <script src='https://unpkg.com/@turf/turf@6/turf.min.js'></script>
+  <link href="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    #map {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+    }
+    .chartContainer{
+      position: absolute;
+      bottom: 0;
+      width: calc(100vw - 20px);
+      height: 200px;
+      overflow: hidden;
+      background: rgba(255, 255, 255, 0.8);
+      margin-bottom: 15px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div id="map"></div>
+  <script src="globalMapTiles.js"></script>
+  <script src="elevationProvider.js"></script>
+  <script src="profileControl.js"></script>
+  <script>
+      const key = 'YOUR_MAPTILER_API_KEY_HERE';
+      const map = new maplibregl.Map({
+        container: 'map', // container id
+        style: `https://api.maptiler.com/maps/outdoor/style.json?key=${key}`, // style URL
+        center: [10.988677069124009, 46.88158715828973], // starting position [lng, lat]
+        zoom: 12, // starting zoom
+      });
+      map.addControl(new maplibregl.NavigationControl(), 'top-right');
+      const globalMercator = new GlobalMercator(512);
+      const elevationProvider = new ElevationProvider(key, globalMercator);
+      map.addControl(new ProfileControl(key, elevationProvider), 'bottom-left');
+  </script>
+</body>
+</html>
