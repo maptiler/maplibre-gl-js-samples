@@ -30,6 +30,7 @@
       center: [16.62662018, 49.2125578], // starting position [lng, lat]
       zoom: 10 // starting zoom
     });
+    map.addControl(new maplibregl.NavigationControl(), 'top-right');
     fetch(`https://api.maptiler.com/geolocation/ip.json?key=${key}`)
     .then((response) => response.json())
     .then((data) => {
@@ -41,7 +42,7 @@
       const marker = new maplibregl.Marker()
         .setLngLat(userLngLat)
         .addTo(map);
-      });
+    });
   </script>
 </body>
 </html>

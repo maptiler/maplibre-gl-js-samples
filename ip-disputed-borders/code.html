@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Display disputed borders based on visitor's view</title>
+  <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+  <script src="https://cdn.maptiler.com/maplibre-gl-js/v2.2.0-pre.2/maplibre-gl.js"></script>
+  <link href="https://cdn.maptiler.com/maplibre-gl-js/v2.2.0-pre.2/maplibre-gl.css" rel="stylesheet" />
+  <style>
+    body { 
+      margin: 0;
+      padding: 0;
+    }
+
+    #map {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div id="map"></div></div>
+  <script>
+    const key = 'YOUR_MAPTILER_API_KEY_HERE';
+    const map = new maplibregl.Map({
+      container: 'map', // container id
+      style: `https://api.maptiler.com/maps/streets/style.json?key=${key}`, // style URL
+      center: [75.503, 33.629], // starting position [lng, lat]
+      zoom: 6 // starting zoom
+    });
+    map.addControl(new maplibregl.NavigationControl(), 'top-right');
+    async function getUserLocationByIP() {
+      const response = await fetch(`https://api.maptiler.com/geolocation/ip.json?key=${key}`);
+      const geolocation = await response.json();
+      return geolocation;
+    }
+    const showDisputedBorders = (map, country_code) => {
+      /*You can uncomment the following line to force a country code to see the map boundaries changes. Use the country code you want to test.*/
+      //country_code = "IN"; 
+      const claimed_by_countries = ["RU", "UA", "XN", "AM", "XK", "IN", "PK", "CN", "NP", "BT", "TR", "SY", "PS", "IL", "SY", "ET", "EH", "SD", "SS", "KE"];
+      if (!claimed_by_countries.includes(country_code)){ //if the country code is not in the list of disputed ones, do nothing and return
+        return;
+      }
+      if (map.getLayer("admin_disputed")) { //for styles based on the basic style
+        const admin_disputed = map.getLayer("admin_disputed");
+        map.setFilter("admin_disputed", [...admin_disputed.filter, ["==", "claimed_by", country_code]]);
+      } else if ( map.getLayer("boundary_2_z5_disputed")) { //for styles based on the streets style
+        const boundary_disputed = map.getLayer("boundary_2_z5_disputed");
+        const boundary_disputed_maritime = map.getLayer("boundary_2_z5_disputed_maritime");
+        const boundary_2_z0_4_disputed = map.getLayer("boundary_2_z0-4_disputed");
+        const boundary_2_z0_4_disputed_maritime = map.getLayer("boundary_2_z0-4_disputed_maritime");
+        map.setFilter("boundary_2_z5_disputed", [...boundary_disputed.filter, ["==", "claimed_by", country_code]]);
+        map.setFilter("boundary_2_z5_disputed_maritime", [...boundary_disputed_maritime.filter, ["==", "claimed_by", country_code]]);
+        map.setFilter("boundary_2_z0-4_disputed", [...boundary_2_z0_4_disputed.filter, ["==", "claimed_by", country_code]]);
+        map.setFilter("boundary_2_z0-4_disputed_maritime", [...boundary_2_z0_4_disputed_maritime.filter, ["==", "claimed_by", country_code]]);
+      }
+    }
+    map.on('load', async () => {
+      const geolocationIP = await getUserLocationByIP();
+      const {country_code} = geolocationIP;
+      showDisputedBorders(map, country_code);
+    });
+    
+  </script>
+</body>
+</html>
