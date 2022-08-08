@@ -30,6 +30,7 @@
             center: [16.62662018, 49.2125578], // starting position [lng, lat]
             zoom: 10 // starting zoom
         });
+        map.addControl(new maplibregl.NavigationControl(), 'top-right');
         map.on('error', function(err) {
             throw new Error("To load the map, you must replace YOUR_MAPTILER_API_KEY_HERE first, see README");
         });

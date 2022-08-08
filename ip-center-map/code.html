@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Center map based on visitor's location</title>
+  <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+  <script src="https://cdn.maptiler.com/maplibre-gl-js/v2.2.0-pre.2/maplibre-gl.js"></script>
+  <link href="https://cdn.maptiler.com/maplibre-gl-js/v2.2.0-pre.2/maplibre-gl.css" rel="stylesheet" />
+  <style>
+    body { 
+      margin: 0;
+      padding: 0;
+    }
+
+    #map {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div id="map"></div>
+  <script>
+    const key = 'YOUR_MAPTILER_API_KEY_HERE';
+    const map = new maplibregl.Map({
+      container: 'map', // container id
+      style: `https://api.maptiler.com/maps/streets/style.json?key=${key}`, // style URL
+      center: [16.62662018, 49.2125578], // starting position [lng, lat]
+      zoom: 10 // starting zoom
+    });
+    fetch(`https://api.maptiler.com/geolocation/ip.json?key=${key}`)
+    .then((response) => response.json())
+    .then((data) => {
+      const userLngLat = [data.longitude, data.latitude];
+      map.jumpTo({
+        center: userLngLat,
+        zoom: 17
+      });
+      const marker = new maplibregl.Marker()
+        .setLngLat(userLngLat)
+        .addTo(map);
+      });
+  </script>
+</body>
+</html>
