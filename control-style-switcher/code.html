@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Display a style switcher control</title>
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+    <script src="https://cdn.maptiler.com/maplibre-gl-js/v2.2.0-pre.2/maplibre-gl.js"></script>
+    <link href="https://cdn.maptiler.com/maplibre-gl-js/v2.2.0-pre.2/maplibre-gl.css" rel="stylesheet" />
+    <style>
+        body { 
+            margin: 0;
+            padding: 0;
+        }
+
+        #map {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /*layerSwitcherControl*/
+        .maplibregl-ctrl-basemaps {
+          display: flex;
+          flex-direction: row;
+          pointer-events: auto;
+          bottom: 15px;
+          position: relative;
+        }
+        .maplibregl-ctrl-basemaps.reverse {
+          flex-direction: row-reverse;
+        }
+        .maplibregl-ctrl-basemaps.column {
+          flex-direction: column;
+        }
+        .maplibregl-ctrl-basemaps.column.reverse {
+          flex-direction: column-reverse;
+        }
+        .maplibregl-ctrl-basemaps .basemap {
+          width: 64px;
+          height: 64px;
+          margin: 2px;
+          border: 2px solid #ccc;
+          box-shadow: 0 1px 5px rgba(0, 0, 0, 0.65);
+          cursor: pointer;
+        }
+        .maplibregl-ctrl-basemaps .basemap.active {
+          border-color: orange;
+          box-shadow: 2px 2px 4px #000;
+        }
+        .maplibregl-ctrl-basemaps.closed .basemap {
+          display: none;
+        }
+        .maplibregl-ctrl-basemaps.closed .basemap.active {
+          display: block;
+          border: 2px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+    <script>
+        const key = 'YOUR_MAPTILER_API_KEY_HERE';
+        const baseMaps = {
+          "streets": {
+            name: "streets",
+            img: "https://cloud.maptiler.com/static/img/maps/streets.png"
+          },
+          "winter": {
+            name: "winter",
+            img: "https://cloud.maptiler.com/static/img/maps/winter.png"
+          },
+          "hybrid": {
+            name: "hybrid",
+            img: "https://cloud.maptiler.com/static/img/maps/hybrid.png"
+          }
+        }
+        const initialStyle = Object.keys(baseMaps)[0];
+        const map = new maplibregl.Map({
+            container: 'map', // container id
+            style: `https://api.maptiler.com/maps/${initialStyle}/style.json?key=${key}`, // style URL
+            center: [16.611342, 49.197304], // starting position [lng, lat]
+            zoom: 12 // starting zoom
+        });
+        map.addControl(new maplibregl.NavigationControl(), 'top-right');
+        class styleSwitcherControl {
+          
+          constructor(options) {
+            this._options = {...options};
+            this._container = document.createElement("div");
+            this._container.classList.add("maplibregl-ctrl");
+            this._container.classList.add("maplibregl-ctrl-basemaps");
+            this._container.classList.add("closed");
+            switch (this._options.expandDirection || "right") {
+                case "top":
+                    this._container.classList.add("reverse");
+                case "down":
+                    this._container.classList.add("column");
+                    break;
+                case "left":
+                    this._container.classList.add("reverse");
+                case "right":
+                    this._container.classList.add("row");
+            }
+            this._container.addEventListener("mouseenter", () => {
+                this._container.classList.remove("closed");
+            });
+            this._container.addEventListener("mouseleave", () => {
+                this._container.classList.add("closed");
+            });
+          }
+
+          onAdd(map) {
+            this._map = map;
+            const basemaps = this._options.basemaps;
+            Object.keys(basemaps).forEach((layerId) => {
+              const base = basemaps[layerId];
+              const basemapContainer = document.createElement("img");
+              basemapContainer.src = base.img;
+              basemapContainer.classList.add("basemap");
+              basemapContainer.dataset.id = layerId;
+              basemapContainer.addEventListener("click", () => {
+                const activeElement = this._container.querySelector(".active");
+                activeElement.classList.remove("active");
+                basemapContainer.classList.add("active");
+                let url_content = `https://api.maptiler.com/maps/${layerId}/style.json?key=${key}`
+                map.setStyle(url_content, {diff: false});
+              });
+              basemapContainer.classList.add("hidden");
+              this._container.appendChild(basemapContainer);
+              if (this._options.initialBasemap === layerId) {
+                  basemapContainer.classList.add("active");
+              }
+            });
+            return this._container;
+          }
+
+          onRemove(){
+            this._container.parentNode?.removeChild(this._container);
+            delete this._map;
+          }
+        }
+        map.addControl(new styleSwitcherControl({basemaps: baseMaps, initialBasemap: initialStyle}), 'bottom-left');
+    </script>
+</body>
+</html>

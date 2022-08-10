@@ -1,0 +1,2895 @@
+{
+  "type": "FeatureCollection",
+  "generator": "overpass-ide",
+  "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+  "timestamp": "2022-08-10T08:48:15Z",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/296444038",
+        "addr:city": "Brno",
+        "addr:conscriptionnumber": "338",
+        "addr:country": "CZ",
+        "addr:housenumber": "17",
+        "addr:postcode": "60200",
+        "addr:street": "Staňkova",
+        "addr:streetnumber": "17",
+        "amenity": "pub",
+        "name": "U Daana",
+        "opening_hours": "Mo-Su 17:00-24:00",
+        "outdoor_seating": "no",
+        "payment:bitcoin": "yes",
+        "payment:diners_club": "yes",
+        "payment:discover_card": "yes",
+        "payment:ethereum": "yes",
+        "payment:jcb": "yes",
+        "payment:litecoin": "yes",
+        "payment:maestro": "yes",
+        "payment:mastercard": "yes",
+        "payment:visa": "yes",
+        "payment:visa_debit": "yes",
+        "payment:visa_electron": "yes",
+        "smoking": "no",
+        "source:addr": "uir_adr",
+        "uir_adr:ADRESA_KOD": "19749147"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.6048043,
+          49.2093947
+        ]
+      },
+      "id": "node/296444038"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/296512579",
+        "addr:city": "Brno",
+        "addr:conscriptionnumber": "372",
+        "addr:country": "CZ",
+        "addr:housenumber": "372/15",
+        "addr:postcode": "60200",
+        "addr:street": "Staňkova",
+        "addr:streetnumber": "15",
+        "amenity": "pub",
+        "cuisine": "regional",
+        "name": "Pivnice U Míče",
+        "opening_hours": "Mo-Su 16:00-24:00",
+        "phone": "+420 608 513 140",
+        "smoking": "no",
+        "source:addr": "uir_adr",
+        "uir_adr:ADRESA_KOD": "19749660"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.6049352,
+          49.2092512
+        ]
+      },
+      "id": "node/296512579"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/383992070",
+        "amenity": "pub",
+        "name": "U Pánků"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.6417291,
+          49.1942426
+        ]
+      },
+      "id": "node/383992070"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/454638137",
+        "amenity": "pub",
+        "name": "Hospoda U kocourka",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.6157555,
+          49.1908063
+        ]
+      },
+      "id": "node/454638137"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/454689420",
+        "amenity": "pub",
+        "name": "Mandragora"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.6159991,
+          49.191525
+        ]
+      },
+      "id": "node/454689420"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/454689423",
+        "amenity": "pub",
+        "name": "Pivnice ve dvoře"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.6156807,
+          49.1913742
+        ]
+      },
+      "id": "node/454689423"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/576176016",
+        "addr:city": "Brno",
+        "addr:housenumber": "27",
+        "addr:postcode": "60200",
+        "addr:street": "Stará",
+        "amenity": "pub",
+        "name": "Clubwash",
+        "opening_hours": "Mo-Su 18:00-00:00",
+        "smoking": "separated",
+        "website": "https://www.clubwash.cz/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.6179362,
+          49.1994774
+        ]
+      },
+      "id": "node/576176016"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/613526547",
+        "addr:city": "Brno",
+        "addr:housenumber": "4",
+        "addr:postcode": "60200",
+        "addr:street": "Sokolská",
+        "amenity": "pub",
+        "brewery": "dalešice",
+        "internet_access": "wlan",
+        "name": "Na dobré cestě",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.5984283,
+          49.2028729
+        ]
+      },
+      "id": "node/613526547"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/613526567",
+        "amenity": "pub",
+        "contact:email": "info@kometapub.cz",
+        "contact:phone": "+420 530 325 808",
+        "internet_access": "wlan",
+        "internet_access:fee": "no",
+        "name": "Kometa Pub",
+        "opening_hours": "Mo-Fr 10:30-23:00; Sa 11:00-23:00",
+        "outdoor_seating": "yes",
+        "payment:cash": "yes",
+        "payment:credit_cards": "yes",
+        "payment:debit_cards": "yes",
+        "payment:meal_vouchers": "yes",
+        "payment:others": "no",
+        "smoking": "separated",
+        "website": "http://kounicova.kometapub.cz/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.600811,
+          49.2030145
+        ]
+      },
+      "id": "node/613526567"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/660644800",
+        "addr:housenumber": "17",
+        "addr:street": "Babičkova",
+        "amenity": "pub",
+        "check_date:opening_hours": "2022-01-01",
+        "name": "U Konkurence",
+        "opening_hours": "Su-Fr 16:00-23:00",
+        "outdoor_seating": "yes",
+        "source": "knowledge",
+        "website": "http://ukonkurence.com/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.6201616,
+          49.2119591
+        ]
+      },
+      "id": "node/660644800"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/664008899",
+        "amenity": "pub"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.6165562,
+          49.1929509
+        ]
+      },
+      "id": "node/664008899"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/670215924",
+        "addr:city": "Brno",
+        "addr:housenumber": "9",
+        "addr:postcode": "60200",
+        "addr:street": "Běhounská",
+        "amenity": "pub",
+        "name": "Jinej Bar",
+        "opening_hours": "Mo,Tu 17:00-02:00, We,Th 17:00-03:00, Fr,Sa 17:00-05:00, Su 17:00-01:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.6089,
+          49.1963133
+        ]
+      },
+      "id": "node/670215924"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/740696624",
+        "addr:city": "Brno",
+        "addr:housenumber": "9",
+        "addr:postcode": "60200",
+        "addr:street": "Lidická",
+        "amenity": "pub",
+        "name": "Rytířská krčma"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.6071971,
+          49.2009971
+        ]
+      },
+      "id": "node/740696624"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/747191342",
+        "amenity": "pub",
+        "name": "Trias",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.5895377,
+          49.214776
+        ]
+      },
+      "id": "node/747191342"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/853189877",
+        "addr:housenumber": "14",
+        "addr:street": "Dukelská třída",
+        "amenity": "pub",
+        "name": "Osmička",
+        "opening_hours": "Mo-Th 09:00-00:00; Fr 09:00-01:00, Sa 11:00-01:00, Su 13:00-23:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.635392,
+          49.2131858
+        ]
+      },
+      "id": "node/853189877"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1203323205",
+        "amenity": "pub",
+        "name": "Alterna",
+        "opening_hours": "Mo-Th 12:00-01:00, Fr 12:00-02:00, Sa 18:00-02:00, Su 18:00-01:00",
+        "source": "survey",
+        "website": "https://www.alterna.cz/",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.5945867,
+          49.2101848
+        ]
+      },
+      "id": "node/1203323205"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1203323231",
+        "amenity": "pub",
+        "name": "A2",
+        "opening_hours": "Mo-Fr 17:00-02:00, Sa 18:00-02:00, Su 18:00-01:00",
+        "source": "survey",
+        "website": "https://www.alterna.cz/",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.5944791,
+          49.2102551
+        ]
+      },
+      "id": "node/1203323231"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1219767746",
+        "addr:city": "Brno",
+        "addr:housenumber": "5",
+        "addr:postcode": "61300",
+        "addr:street": "Zemědělská",
+        "amenity": "pub",
+        "name": "Akademická vinotéka",
+        "opening_hours": "Sep-Jun Mo-Fr 10:30-19:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.6189745,
+          49.2108174
+        ]
+      },
+      "id": "node/1219767746"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1225703397",
+        "addr:city": "Brno",
+        "addr:housenumber": "6",
+        "addr:postcode": "60200",
+        "addr:street": "Bašty",
+        "amenity": "pub",
+        "name": "Brooklyn",
+        "source": "survey",
+        "website": "http://www.rcbrooklyn.com/",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.6098467,
+          49.1908505
+        ]
+      },
+      "id": "node/1225703397"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1237152989",
+        "addr:city": "Brno",
+        "addr:housenumber": "3",
+        "addr:postcode": "60200",
+        "addr:street": "Šumavská",
+        "amenity": "pub",
+        "name": "Kulečníkový klub Brio",
+        "opening_hours": "Mo-Fr 14:00-02:00",
+        "phone": "+420 606 407 654",
+        "sport": "billiards",
+        "website": "http://www.briokulec.cz/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.6007951,
+          49.2126983
+        ]
+      },
+      "id": "node/1237152989"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1239215583",
+        "addr:city": "Brno",
+        "addr:housenumber": "5",
+        "addr:postcode": "60200",
+        "addr:street": "Josefská",
+        "amenity": "pub",
+        "internet_access": "wlan",
+        "name": "Atrium",
+        "opening_hours": "Mo-Su 11:00-01:00",
+        "smoking": "yes",
+        "source": "survey",
+        "website": "http://www.atriumbar.cz/",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.6124114,
+          49.1927715
+        ]
+      },
+      "id": "node/1239215583"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1354993521",
+        "addr:city": "Brno",
+        "addr:housenumber": "37",
+        "addr:postcode": "60200",
+        "addr:street": "Špitálka",
+        "amenity": "pub",
+        "name": "Tančící dům"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.6206901,
+          49.1921283
+        ]
+      },
+      "id": "node/1354993521"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1390744628",
+        "amenity": "pub",
+        "contact:email": "palkoriobar@gmail.com",
+        "contact:phone": "+420 739939021",
+        "name": "Rio bar",
+        "opening_hours": "Mo-Fr 13:00-01:00; Sa,Su 14:00-01:00",
+        "wheelchair": "limited"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.5811222,
+          49.2016975
+        ]
+      },
+      "id": "node/1390744628"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1399376340",
+        "addr:city": "Brno",
+        "addr:housenumber": "10",
+        "addr:postcode": "60200",
+        "addr:street": "Jana Uhra",
+        "amenity": "pub",
+        "email": "info@pivniceuriciho.cz",
+        "internet_access": "wlan",
+        "name": "Pivnice U Ričího",
+        "opening_hours": "Mo-Th 16:00-24:00, Fr 16:00-01:00, Sa 17:00-01:00, Su 17:00-24:00",
+        "phone": "+420 734 404 517",
+        "website": "http://www.pivniceuriciho.cz/",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.5961539,
+          49.2025413
+        ]
+      },
+      "id": "node/1399376340"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1418101194",
+        "addr:city": "Brno",
+        "addr:housenumber": "8",
+        "addr:postcode": "60200",
+        "addr:street": "bratří Čapků",
+        "amenity": "pub",
+        "email": "info@lb-beerhouse.cz",
+        "name": "Lucky Bastard Beerhouse",
+        "opening_hours": "Mo-Sa 16:00-24:00",
+        "payment:american_express": "yes",
+        "payment:diners_club": "yes",
+        "payment:discover_card": "yes",
+        "payment:jcb": "yes",
+        "payment:maestro": "yes",
+        "payment:mastercard": "yes",
+        "payment:visa": "yes",
+        "payment:visa_debit": "yes",
+        "payment:visa_electron": "yes",
+        "phone": "+420 739 483 921",
+        "smoking": "no",
+        "website": "http://lb-beerhouse.cz/",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.59116,
+          49.1988843
+        ]
+      },
+      "id": "node/1418101194"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1481595433",
+        "addr:city": "Brno",
+        "addr:housenumber": "518/24",
+        "addr:postcode": "60200",
+        "addr:street": "Veveří",
+        "amenity": "pub",
+        "name": "Pivo & Syn",
+        "opening_hours": "Tu-Th 17:00-22:00; Fr 17:00-23:00; Sa 17:00-22:00",
+        "source": "survey",
+        "wheelchair": "limited"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.6014312,
+          49.2002031
+        ]
+      },
+      "id": "node/1481595433"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1514494178",
+        "addr:city": "Brno",
+        "addr:housenumber": "8",
+        "addr:postcode": "60200",
+        "addr:street": "Traubova",
+        "amenity": "pub",
+        "name": "Traubka",
+        "opening_hours": "closed",
+        "outdoor_seating": "no",
+        "source": "knowledge",
+        "wheelchair": "limited"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.6152336,
+          49.202132
+        ]
+      },
+      "id": "node/1514494178"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1514496647",
+        "addr:city": "Brno",
+        "addr:housenumber": "46",
+        "addr:postcode": "61300",
+        "addr:street": "Merhautova",
+        "amenity": "pub",
+        "name": "U Žíznivé opice",
+        "opening_hours": "Mo-Fr 15:00-23:00; Sa 17:00-23:00; Su 17:00-22:00",
+        "source": "knowledge",
+        "website": "www.uzizniveopice.cz",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.6235307,
+          49.2042681
+        ]
+      },
+      "id": "node/1514496647"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1528351530",
+        "addr:city": "Brno",
+        "addr:housenumber": "2",
+        "addr:postcode": "60200",
+        "addr:street": "Kounicova",
+        "amenity": "pub",
+        "name": "Modrá růže"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.6051622,
+          49.1999992
+        ]
+      },
+      "id": "node/1528351530"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1557188435",
+        "addr:city": "Brno",
+        "addr:housenumber": "18",
+        "addr:postcode": "60200",
+        "addr:street": "Starobrněnská",
+        "amenity": "pub",
+        "name": "Pivnice U Poutníka"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.606625,
+          49.1927801
+        ]
+      },
+      "id": "node/1557188435"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1612122001",
+        "addr:city": "Brno",
+        "addr:housenumber": "15",
+        "addr:postcode": "61500",
+        "addr:street": "Stará osada",
+        "amenity": "pub",
+        "name": "Svitavská Rychta",
+        "source": "survey",
+        "wheelchair": "limited"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.6406349,
+          49.202022
+        ]
+      },
+      "id": "node/1612122001"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1614708393",
+        "addr:city": "Brno",
+        "addr:housenumber": "38",
+        "addr:postcode": "60200",
+        "addr:street": "Veveří",
+        "amenity": "pub",
+        "indoor_seating": "yes",
+        "name": "Pivní Stáj",
+        "opening_hours": "Mo-Th 11:00-24:00, Su 11:00-23:00, Fr,Sa 11:00-01:00",
+        "outdoor_seating": "no",
+        "phone": "+420 776 006 008",
+        "source": "survey",
+        "website": "https://www.pivnistaj.cz/",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.5999852,
+          49.2011526
+        ]
+      },
+      "id": "node/1614708393"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1631087255",
+        "amenity": "pub"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.5953721,
+          49.1760833
+        ]
+      },
+      "id": "node/1631087255"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1723145469",
+        "amenity": "pub",
+        "internet_access": "wlan",
+        "name": "Sborovna",
+        "opening_hours": "Mo-Sa 17:00-23:00; Su off",
+        "payment:cash": "yes",
+        "payment:diners_club": "yes",
+        "payment:jcb": "yes",
+        "payment:maestro": "yes",
+        "payment:mastercard": "yes",
+        "payment:visa": "yes",
+        "payment:visa_debit": "yes",
+        "payment:visa_electron": "yes",
+        "smoking": "isolated",
+        "sport": "billiards"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.6032637,
+          49.2035731
+        ]
+      },
+      "id": "node/1723145469"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1725956483",
+        "addr:city": "Brno",
+        "addr:housenumber": "64",
+        "addr:postcode": "60200",
+        "addr:street": "Úvoz",
+        "amenity": "pub",
+        "brewery": "yes;various",
+        "name": "U Jelena",
+        "opening_hours": "Sa-Th 09:00-18:00",
+        "outdoor_seating": "no",
+        "smoking": "outside",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.5941247,
+          49.1975409
+        ]
+      },
+      "id": "node/1725956483"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1725958874",
+        "amenity": "pub",
+        "brewery": "various",
+        "name": "Pomalý bar"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.5941691,
+          49.1974011
+        ]
+      },
+      "id": "node/1725958874"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2172312233",
+        "addr:city": "Brno",
+        "addr:housenumber": "10",
+        "addr:postcode": "60200",
+        "addr:street": "Lidická",
+        "amenity": "pub",
+        "check_date:opening_hours": "2021-09-19",
+        "email": "info@ochutnavkovapivnice.cz",
+        "name": "Ochutnávková pivnice",
+        "opening_hours": "Mo-Fr 15:00-24:00; Sa,Su 16:00-24:00",
+        "phone": "+420 777 828 928",
+        "smoking": "no",
+        "website": "http://www.ochutnavkovapivnice.cz/",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.6078601,
+          49.2009142
+        ]
+      },
+      "id": "node/2172312233"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2199533459",
+        "addr:city": "Brno",
+        "addr:housenumber": "3",
+        "addr:postcode": "60200",
+        "addr:street": "Traubova",
+        "amenity": "pub",
+        "name": "Mýdlo",
+        "opening_hours": "Mo-Su 16:00-02:00",
+        "outdoor_seating": "yes",
+        "source": "knowledge"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.6151463,
+          49.2019222
+        ]
+      },
+      "id": "node/2199533459"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2276071302",
+        "amenity": "pub",
+        "name": "Živo u Palečka",
+        "opening_hours": "Mo 18:00-23:00; Tu-Sa 17:00-24:00; Su 18:00-23:00",
+        "payment:cash": "yes",
+        "website": "https://zivoupalecka.cz/",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.6123248,
+          49.1990463
+        ]
+      },
+      "id": "node/2276071302"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2286876328",
+        "addr:city": "Brno",
+        "addr:housenumber": "5b",
+        "addr:postcode": "60200",
+        "addr:street": "Pellicova",
+        "amenity": "pub",
+        "internet_access": "wlan",
+        "internet_access:fee": "no",
+        "name": "Na blbým místě",
+        "opening_hours": "Mo-Th 16:00-01:00; Fr 16:00-04:00",
+        "phone": "+420 739 781 208",
+        "website": "http://na-blbym-miste.cz/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.6023288,
+          49.1925035
+        ]
+      },
+      "id": "node/2286876328"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2290055671",
+        "addr:city": "Brno",
+        "addr:housenumber": "581/10C",
+        "addr:postcode": "63900",
+        "addr:street": "Kamenná čtvrť",
+        "amenity": "pub",
+        "brewery": "various;Radegast;Kozel",
+        "check_date:opening_hours": "2021-12-04",
+        "email": "hanicek.stankova@gmail.com",
+        "name": "DuckBar",
+        "opening_hours": "Mo-Su 17:00-02:00",
+        "outdoor_seating": "yes",
+        "phone": "606 356 082",
+        "smoking": "outside",
+        "website": "https://duckbar.cz/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.5865828,
+          49.1836187
+        ]
+      },
+      "id": "node/2290055671"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2300804239",
+        "addr:city": "Brno",
+        "addr:housenumber": "8",
+        "addr:postcode": "60300",
+        "addr:street": "Mendlovo náměstí",
+        "amenity": "pub",
+        "name": "Pivnice U Všech svatých"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.5958925,
+          49.1889708
+        ]
+      },
+      "id": "node/2300804239"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2349167308",
+        "amenity": "pub",
+        "name": "Putyka U Míka"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.6115576,
+          49.1928913
+        ]
+      },
+      "id": "node/2349167308"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2352895242",
+        "amenity": "pub",
+        "brewery": "Dalešice;yes",
+        "name": "Ambra",
+        "opening_hours": "Mo-Fr 18:00-24:00; Sa 18:00-22:00",
+        "smoking": "outside",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.5814223,
+          49.2087416
+        ]
+      },
+      "id": "node/2352895242"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2451609620",
+        "addr:city": "Brno",
+        "addr:housenumber": "12",
+        "addr:postcode": "60200",
+        "addr:street": "Starobrněnská",
+        "amenity": "pub",
+        "contact:phone": "+420 776705146",
+        "contact:website": "https://maltworm.cz",
+        "name": "Malt Worm",
+        "opening_hours": "Mo-We 16:00-00:00;Th-Sa 16:00-01:00;Su 16:00-23:00",
+        "outdoor_seating": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.6069824,
+          49.1926383
+        ]
+      },
+      "id": "node/2451609620"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2451609633",
+        "addr:city": "Brno",
+        "addr:housenumber": "16",
+        "addr:postcode": "60200",
+        "addr:street": "Běhounská",
+        "amenity": "pub",
+        "internet_access": "wlan",
+        "name": "Výčep na stojáka",
+        "opening_hours": "Mo-Fr 12:00-23:30; PH,Sa,Su 14:00-23:30",
+        "outdoor_seating": "yes",
+        "phone": "+420 702 202 048",
+        "smoking": "no",
+        "website": "http://www.vycepnastojaka.cz/",
+        "wheelchair": "limited"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.6092906,
+          49.1967555
+        ]
+      },
+      "id": "node/2451609633"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2611062956",
+        "addr:city": "Brno",
+        "addr:housenumber": "55",
+        "addr:postcode": "60200",
+        "addr:street": "Veveří",
+        "amenity": "pub",
+        "check_date:opening_hours": "2021-08-29",
+        "indoor_seating": "yes",
+        "name": "Hluchá zmije",
+        "opening_hours": "Mo-Fr 16:00-24:00; Sa-Su 17:00-24:00",
+        "outdoor_seating": "sidewalk",
+        "phone": "+420 728 275 830",
+        "smoking": "no",
+        "website": "https://hlucha-zmije.business.site/",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.5970076,
+          49.2030412
+        ]
+      },
+      "id": "node/2611062956"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2623483622",
+        "addr:housenumber": "33",
+        "addr:postcode": "61800",
+        "addr:street": "Svatoplukova",
+        "amenity": "pub",
+        "internet_access": "wlan",
+        "internet_access:fee": "no",
+        "name": "Hospůdka U Přátel",
+        "opening_hours": "Mo-Su 14:00-22:00",
+        "source": "survey"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.6410346,
+          49.2048571
+        ]
+      },
+      "id": "node/2623483622"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2625640401",
+        "addr:city": "Brno",
+        "addr:housenumber": "8",
+        "addr:postcode": "60200",
+        "addr:street": "Úvoz",
+        "amenity": "pub",
+        "name": "U Padreho",
+        "opening_hours": "Mo-Sa 17:00-01:00; Su 18:00-01:00",
+        "phone": "+420 702 906 270",
+        "smoking": "no",
+        "website": "http://www.upadreho.cz/",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.5959005,
+          49.192473
+        ]
+      },
+      "id": "node/2625640401"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2658181615",
+        "addr:city": "Brno",
+        "addr:housenumber": "3",
+        "addr:postcode": "60200",
+        "addr:street": "Dvořákova",
+        "amenity": "pub",
+        "name": "Zelená Kočka",
+        "opening_hours": "Mo-Th 15:00-24:00, Fr 15:00-01:00, Sa 15:00-24:00, Su 17:00-22:00",
+        "phone": "+420 775 566 602",
+        "website": "http://www.zelenakocka.cz",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.6101585,
+          49.195946
+        ]
+      },
+      "id": "node/2658181615"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2784431185",
+        "addr:city": "Brno",
+        "addr:housenumber": "80",
+        "addr:postcode": "63900",
+        "addr:street": "Vídeňská",
+        "amenity": "pub",
+        "name": "B & W Pub"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.5952899,
+          49.1784425
+        ]
+      },
+      "id": "node/2784431185"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2799103707",
+        "addr:city": "Brno",
+        "addr:housenumber": "96",
+        "addr:postcode": "61300",
+        "addr:street": "Merhautova",
+        "amenity": "pub",
+        "name": "Hluchá Zmije",
+        "opening_hours": "Mo-Fr 16:00-23:00; Sa-Su 17:00-23:00",
+        "smoking": "outside"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.6239758,
+          49.2085764
+        ]
+      },
+      "id": "node/2799103707"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2805580187",
+        "addr:city": "Brno",
+        "addr:housenumber": "3",
+        "addr:postcode": "60200",
+        "addr:street": "Vrchlického sad",
+        "amenity": "pub",
+        "email": "pivonzije@gmail.com",
+        "name": "Pivoň",
+        "opening_hours": "Mo-Su 15:00-24:00",
+        "phone": "+420 739 093 093",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.6116875,
+          49.2046526
+        ]
+      },
+      "id": "node/2805580187"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2805661408",
+        "addr:city": "Brno",
+        "addr:housenumber": "51",
+        "addr:postcode": "60200",
+        "addr:street": "Lidická",
+        "amenity": "pub",
+        "email": "dojcax@seznam.cz",
+        "name": "U DOJČI",
+        "opening_hours": "Tu-Sa 15:00-24:00; Su 15:00-22:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.6059328,
+          49.2045221
+        ]
+      },
+      "id": "node/2805661408"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2815481502",
+        "addr:city": "Brno",
+        "addr:housenumber": "3",
+        "addr:postcode": "60200",
+        "addr:street": "Divadelní",
+        "amenity": "pub",
+        "name": "Pivnice U Sedláka",
+        "opening_hours": "Mo-Th 15:00-01:00; Fr 15:00-03:00; Sa 17:00-01:00; Su 17:00-24:00",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.6141169,
+          49.1949665
+        ]
+      },
+      "id": "node/2815481502"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2815655659",
+        "addr:city": "Brno",
+        "addr:housenumber": "23",
+        "addr:postcode": "61300",
+        "addr:street": "Trávníky",
+        "amenity": "pub",
+        "name": "Galerie T23",
+        "opening_hours": "Mo-Th 17:00-22:00; Fr 18:00-22:00",
+        "opening_hours:signed": "no",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.6178229,
+          49.2093447
+        ]
+      },
+      "id": "node/2815655659"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2816946255",
+        "addr:city": "Brno",
+        "addr:housenumber": "152",
+        "addr:postcode": "61300",
+        "addr:street": "Jugoslávská",
+        "amenity": "pub",
+        "name": "Bistro U Klokana"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.6228007,
+          49.2137063
+        ]
+      },
+      "id": "node/2816946255"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2838672160",
+        "addr:city": "Brno",
+        "addr:housenumber": "8",
+        "addr:postcode": "60200",
+        "addr:street": "Skřivanova",
+        "amenity": "pub",
+        "internet_access": "wlan",
+        "name": "Druhá kolej",
+        "opening_hours": "Mo-Su 17:00-24:00",
+        "smoking": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.6045546,
+          49.2093834
+        ]
+      },
+      "id": "node/2838672160"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2838697108",
+        "amenity": "pub",
+        "name": "Topas",
+        "opening_hours": "Mo-Su 08:00-04:00",
+        "website": "http://www.topasclub.cz/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.5827588,
+          49.207907
+        ]
+      },
+      "id": "node/2838697108"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2916588758",
+        "addr:city": "Brno",
+        "addr:housenumber": "34",
+        "addr:postcode": "61300",
+        "addr:street": "Jugoslávská",
+        "amenity": "pub",
+        "email": "wicasha@gmail.com",
+        "name": "Pivnice Na Šrébráku",
+        "opening_hours": "Mo-Sa 16:00-24:00; Su 16:00-22:00",
+        "outdoor_seating": "yes",
+        "phone": "+420 739 439 164"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.6224496,
+          49.2061126
+        ]
+      },
+      "id": "node/2916588758"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3079093206",
+        "addr:city": "Brno",
+        "addr:housenumber": "2",
+        "addr:postcode": "60200",
+        "addr:street": "Pekařská",
+        "amenity": "pub",
+        "internet_access": "wlan",
+        "name": "Výčep Na stojáka",
+        "opening_hours": "Mo-Fr 16:00-24:00; Sa 17:00-23:00; PH,Su 17:00-22:00",
+        "phone": "+420 702 203 048",
+        "smoking": "no",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.604618,
+          49.1923522
+        ]
+      },
+      "id": "node/3079093206"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3080412400",
+        "addr:city": "Brno",
+        "addr:housenumber": "2",
+        "addr:postcode": "60200",
+        "addr:street": "Sukova",
+        "amenity": "pub",
+        "name": "Kahla Pub",
+        "opening_hours": "24/7",
+        "smoking": "yes",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.6123312,
+          49.1960825
+        ]
+      },
+      "id": "node/3080412400"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3098401871",
+        "addr:city": "Brno",
+        "addr:housenumber": "3",
+        "addr:postcode": "60200",
+        "addr:street": "Jana Uhra",
+        "amenity": "pub",
+        "name": "Naproti Naproti",
+        "opening_hours": "Mo-Su 04:20-24:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.597209,
+          49.2024655
+        ]
+      },
+      "id": "node/3098401871"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3151289116",
+        "addr:city": "Brno",
+        "addr:housenumber": "10",
+        "addr:postcode": "60200",
+        "addr:street": "Rooseveltova",
+        "amenity": "pub",
+        "name": "SPURS"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.6109325,
+          49.197505
+        ]
+      },
+      "id": "node/3151289116"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3156121890",
+        "addr:city": "Brno",
+        "addr:housenumber": "3",
+        "addr:postcode": "60200",
+        "addr:street": "Hrnčířská",
+        "amenity": "pub",
+        "email": "uvalaska@uvalaska.cz",
+        "name": "U Valáška",
+        "opening_hours": "Mo-Sa 16:00-24:00",
+        "phone": "+420792321190",
+        "website": "http://uvalaska.cz/",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.6023266,
+          49.210211
+        ]
+      },
+      "id": "node/3156121890"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3157724317",
+        "addr:city": "Brno",
+        "addr:housenumber": "8",
+        "addr:postcode": "61600",
+        "addr:street": "Tábor",
+        "amenity": "pub",
+        "name": "Pivnice 8",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.5875924,
+          49.2108598
+        ]
+      },
+      "id": "node/3157724317"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3159256389",
+        "addr:city": "Brno",
+        "addr:housenumber": "16",
+        "addr:postcode": "60200",
+        "addr:street": "Orlí",
+        "amenity": "pub",
+        "brewery": "Polička;Poutník",
+        "name": "Pivnice Pod Studnou",
+        "opening_hours": "Mo-Th 16:00-00:30, Fr 17:00-02:00, Sa 18:00-00:00",
+        "outdoor_seating": "yes",
+        "phone": "+420 739 460 684",
+        "smoking": "outside",
+        "website": "http://pivnicepodstudnou.cz/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.6115017,
+          49.1931846
+        ]
+      },
+      "id": "node/3159256389"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3159705938",
+        "addr:city": "Brno",
+        "addr:housenumber": "20",
+        "addr:postcode": "61500",
+        "addr:street": "Bubeníčkova",
+        "amenity": "pub",
+        "name": "Rocky Bar",
+        "opening_hours": "24/7"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.6375384,
+          49.2010524
+        ]
+      },
+      "id": "node/3159705938"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3188485960",
+        "addr:city": "Brno",
+        "addr:housenumber": "5a",
+        "addr:postcode": "60200",
+        "addr:street": "Lidická",
+        "amenity": "pub",
+        "name": "2 blázni na poličce",
+        "opening_hours": "Mo-Fr 16:00-24:00; Sa 17:00-24:00; Su 17:00-23:00",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.6074377,
+          49.2007878
+        ]
+      },
+      "id": "node/3188485960"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3188517767",
+        "addr:city": "Brno",
+        "addr:housenumber": "2",
+        "addr:postcode": "60200",
+        "addr:street": "Jakubské náměstí",
+        "amenity": "pub",
+        "name": "Club Cavern"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.6082714,
+          49.1962823
+        ]
+      },
+      "id": "node/3188517767"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3216608095",
+        "addr:city": "Brno",
+        "addr:housenumber": "3",
+        "addr:postcode": "60200",
+        "addr:street": "Střední",
+        "amenity": "pub",
+        "name": "Duo Bar",
+        "opening_hours": "Mo-Fr 10:00-22:00; Sa,Su,PH 11:00-22:00",
+        "smoking": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.607043,
+          49.2090389
+        ]
+      },
+      "id": "node/3216608095"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3216608111",
+        "addr:city": "Brno",
+        "addr:housenumber": "40",
+        "addr:postcode": "61200",
+        "addr:street": "Štefánikova",
+        "amenity": "pub",
+        "brewery": "yes",
+        "internet_access": "wlan",
+        "name": "Chillárna",
+        "opening_hours": "Tu-Th 17:17-23:45; Fr,Sa 17:17-01:23",
+        "wheelchair": "yes",
+        "wifi": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.6007317,
+          49.2142763
+        ]
+      },
+      "id": "node/3216608111"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3242996047",
+        "addr:city": "Brno",
+        "addr:housenumber": "50a",
+        "addr:postcode": "60200",
+        "addr:street": "Cejl",
+        "amenity": "pub",
+        "name": "Sindibád",
+        "opening_hours": "24/7"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.6212863,
+          49.1984731
+        ]
+      },
+      "id": "node/3242996047"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3243712288",
+        "addr:city": "Brno",
+        "addr:housenumber": "3",
+        "addr:postcode": "60200",
+        "addr:street": "Koliště",
+        "amenity": "pub",
+        "email": "oblast.bar@gmail.com",
+        "name": "Oblast",
+        "opening_hours": "Mo-Fr 17:00-24:00; Sa 18:00-24:00",
+        "phone": "+420 725 811 022",
+        "website": "http://oblastbar.cz/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.6087148,
+          49.2002393
+        ]
+      },
+      "id": "node/3243712288"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3253806183",
+        "addr:city": "Brno",
+        "addr:housenumber": "8",
+        "addr:postcode": "60200",
+        "addr:street": "Štefánikova",
+        "amenity": "pub",
+        "name": "Stará pekárna",
+        "opening_hours": "Mo-Tu 17:30-02:00, We-Th 17:30-03:00, Fr 17:30-03:00, Sa 17:30-03:00; PH off",
+        "phone": "+420 773 834 538",
+        "website": "http://www.starapekarna.cz/",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.6041739,
+          49.2083913
+        ]
+      },
+      "id": "node/3253806183"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3384132520",
+        "addr:city": "Brno",
+        "addr:housenumber": "16",
+        "addr:postcode": "60200",
+        "addr:street": "Jánská",
+        "amenity": "pub",
+        "internet_access": "wlan",
+        "name": "Pivní burza",
+        "opening_hours": "Mo-Sa 15:00-01:00",
+        "outdoor_seating": "yes",
+        "smoking": "outside",
+        "start_date": "2016-04-19",
+        "website": "http://www.pivniburza.cz/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.6115997,
+          49.1947947
+        ]
+      },
+      "id": "node/3384132520"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3390996337",
+        "addr:city": "Brno",
+        "addr:housenumber": "14",
+        "addr:postcode": "60200",
+        "addr:street": "Starobrněnská",
+        "amenity": "pub",
+        "contact:phone": "+420 776158001",
+        "name": "Pivnice Dobré pivo",
+        "opening_hours": "Mo-Sa 16:00-00:00; Su 17:00-22:00",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.6069551,
+          49.1925179
+        ]
+      },
+      "id": "node/3390996337"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3404968033",
+        "addr:city": "Brno",
+        "addr:housenumber": "3",
+        "addr:postcode": "61600",
+        "addr:street": "Tábor",
+        "amenity": "pub",
+        "name": "Pivnice u Čolka",
+        "phone": "+420 607 388 398",
+        "website": "https://cs-cz.facebook.com/ucolka",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.5869792,
+          49.2107362
+        ]
+      },
+      "id": "node/3404968033"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3404968034",
+        "addr:city": "Brno",
+        "addr:housenumber": "25",
+        "addr:postcode": "61600",
+        "addr:street": "Tábor",
+        "amenity": "pub",
+        "name": "Pub U Dvou přátel",
+        "opening_hours": "Mo-Su 16:00-24:00",
+        "phone": "+420 777 106 151",
+        "website": "https://www.facebook.com/udvoupratelbrno",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.5882249,
+          49.2121466
+        ]
+      },
+      "id": "node/3404968034"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3462928345",
+        "addr:city": "Brno",
+        "addr:housenumber": "841/39",
+        "addr:postcode": "61400",
+        "addr:street": "Vranovská",
+        "amenity": "pub",
+        "name": "Friend & Me",
+        "opening_hours": "24/7"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.6269602,
+          49.2072884
+        ]
+      },
+      "id": "node/3462928345"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3489374313",
+        "addr:city": "Brno",
+        "addr:housenumber": "28",
+        "addr:postcode": "61300",
+        "addr:street": "Merhautova",
+        "amenity": "pub",
+        "name": "Blekfild"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.6217503,
+          49.2036905
+        ]
+      },
+      "id": "node/3489374313"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3498332578",
+        "addr:city": "Brno",
+        "addr:housenumber": "13",
+        "addr:postcode": "60200",
+        "addr:street": "Kapucínské náměstí",
+        "amenity": "pub",
+        "check_date:opening_hours": "2021-10-28",
+        "name": "U Žíznivýho Pupíku",
+        "opening_hours": "Mo-Fr 15:00-24:00; Sa 17:00-24:00",
+        "smoking": "no",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.6100512,
+          49.1917089
+        ]
+      },
+      "id": "node/3498332578"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3498742797",
+        "addr:city": "Brno",
+        "addr:housenumber": "9",
+        "addr:postcode": "61500",
+        "addr:street": "Markéty Kuncové",
+        "amenity": "pub",
+        "name": "Pivnice POD OŘECHY",
+        "opening_hours": "Mo-Su 15:00-24:00",
+        "outdoor_seating": "yes",
+        "smoking": "yes",
+        "website": "http://www.podorechy.cz/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.6387224,
+          49.2090279
+        ]
+      },
+      "id": "node/3498742797"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3505168435",
+        "addr:city": "Brno",
+        "addr:housenumber": "10",
+        "addr:postcode": "60200",
+        "addr:street": "Pellicova",
+        "amenity": "pub",
+        "name": "U Alberta",
+        "opening_hours": "16:00-23:45",
+        "outdoor_seating": "yes",
+        "phone": "+420 608 621 697",
+        "smoking": "outside",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.6008678,
+          49.1927929
+        ]
+      },
+      "id": "node/3505168435"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3505216514",
+        "addr:city": "Brno",
+        "addr:housenumber": "17",
+        "addr:postcode": "60200",
+        "addr:street": "Grohova",
+        "amenity": "pub",
+        "name": "U Bosé Nohy",
+        "payment:diners_club": "yes",
+        "payment:maestro": "yes",
+        "payment:mastercard": "yes",
+        "payment:visa": "yes",
+        "payment:visa_debit": "yes",
+        "payment:visa_electron": "yes",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.5961642,
+          49.2006188
+        ]
+      },
+      "id": "node/3505216514"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3605552983",
+        "addr:city": "Brno",
+        "addr:housenumber": "90",
+        "addr:postcode": "60300",
+        "addr:street": "Hlinky",
+        "amenity": "pub",
+        "name": "Výstec"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.5830021,
+          49.1900259
+        ]
+      },
+      "id": "node/3605552983"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3605560360",
+        "addr:city": "Brno",
+        "addr:housenumber": "8a",
+        "addr:postcode": "61600",
+        "addr:street": "Burianovo náměstí",
+        "amenity": "pub",
+        "name": "Pivnice Pošta",
+        "opening_hours": "Mo-Su 16:00-03:00",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.5784324,
+          49.2125569
+        ]
+      },
+      "id": "node/3605560360"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3605563368",
+        "addr:city": "Brno",
+        "addr:housenumber": "78",
+        "addr:postcode": "60200",
+        "addr:street": "Úvoz",
+        "amenity": "pub",
+        "name": "Pivnice Zastávka",
+        "opening_hours": "Mo-Fr 15:00-20:00; Sa,Su 15:00-20:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.5935861,
+          49.1992593
+        ]
+      },
+      "id": "node/3605563368"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3712445426",
+        "addr:city": "Brno",
+        "addr:housenumber": "4",
+        "addr:postcode": "60200",
+        "addr:street": "Moravské náměstí",
+        "amenity": "pub",
+        "internet_access": "wlan",
+        "name": "Taproom",
+        "opening_hours": "Mo-Fr 10:00-24:00; Sa,Su 14:00-24:00",
+        "outdoor_seating": "yes",
+        "payment:cash": "zxzx",
+        "payment:diners_club": "yes",
+        "payment:jcb": "yes",
+        "payment:maestro": "yes",
+        "payment:mastercard": "yes",
+        "payment:visa": "yes",
+        "payment:visa_debit": "yes",
+        "payment:visa_electron": "yes",
+        "phone": "+420 724 188 188",
+        "smoking": "no",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.607744,
+          49.1973204
+        ]
+      },
+      "id": "node/3712445426"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3713159281",
+        "addr:city": "Brno",
+        "addr:housenumber": "9",
+        "addr:postcode": "60200",
+        "addr:street": "Zelný trh",
+        "amenity": "pub",
+        "name": "Veselá husa",
+        "opening_hours": "Mo-Fr 11:00-23:00; Sa-Su 15:00-01:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.6078191,
+          49.1918918
+        ]
+      },
+      "id": "node/3713159281"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3719909984",
+        "addr:city": "Brno",
+        "addr:housenumber": "17",
+        "addr:postcode": "61600",
+        "addr:street": "Tábor",
+        "amenity": "pub",
+        "name": "Hostinec u Kořínků",
+        "opening_hours": "Mo-Su 10:00-24:00",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.5877927,
+          49.2117137
+        ]
+      },
+      "id": "node/3719909984"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3722675329",
+        "amenity": "pub",
+        "name": "Draken",
+        "opening_hours": "Mo-Su 09:00-23:00",
+        "outdoor_seating": "yes",
+        "toilets": "yes",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.5857752,
+          49.2025623
+        ]
+      },
+      "id": "node/3722675329"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3838577619",
+        "amenity": "pub",
+        "name": "Na Chaloupce"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.577017,
+          49.1733142
+        ]
+      },
+      "id": "node/3838577619"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3930775091",
+        "addr:street": "Vídeňská",
+        "amenity": "pub",
+        "contact:email": "stena.brno@hudy.cz",
+        "contact:phone": "+ 420 733 490 019",
+        "contact:website": "http://www.hudysteny.cz/brno",
+        "leisure": "sports_centre",
+        "name": "Hudy lezecká stěna",
+        "opening_hours": "Mo, Fr-Su 10:00-22:00; Tu-Th 08:00-22:00",
+        "sport": "climbing"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.5998993,
+          49.1737204
+        ]
+      },
+      "id": "node/3930775091"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3954964880",
+        "addr:city": "Brno",
+        "addr:country": "CZ",
+        "addr:housenumber": "9",
+        "addr:street": "Přadlácká",
+        "amenity": "pub",
+        "name": "Country club u Fariho",
+        "opening_hours": "Mo-Sa 09:00-23:00",
+        "phone": "+420605265456",
+        "website": "http://www.ufariho.cz/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.6246973,
+          49.2017139
+        ]
+      },
+      "id": "node/3954964880"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4114985156",
+        "addr:city": "Brno",
+        "addr:housenumber": "34",
+        "addr:postcode": "61600",
+        "addr:street": "Minská",
+        "amenity": "pub",
+        "check_date:opening_hours": "2022-05-21",
+        "internet_access": "wlan",
+        "name": "U Putchy",
+        "opening_hours": "Mo-Fr 14:00-22:30; Sa 18:00-22:30; Su 17:00-22:30",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.5837352,
+          49.2112689
+        ]
+      },
+      "id": "node/4114985156"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4180609488",
+        "addr:city": "Brno",
+        "addr:housenumber": "9",
+        "addr:postcode": "60200",
+        "addr:street": "Veveří",
+        "amenity": "pub",
+        "name": "Nálevna U Leona"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.6023369,
+          49.1992949
+        ]
+      },
+      "id": "node/4180609488"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4180626915",
+        "addr:city": "Brno",
+        "addr:housenumber": "43",
+        "addr:postcode": "60200",
+        "addr:street": "Veveří",
+        "amenity": "pub",
+        "indoor_seating": "yes",
+        "name": "Pivnice 43",
+        "opening_hours": "Mo-Su 16:00-23:00",
+        "outdoor_seating": "sidewalk",
+        "phone": "+420 608 513 887",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.5983524,
+          49.2019764
+        ]
+      },
+      "id": "node/4180626915"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4180626918",
+        "addr:city": "Brno",
+        "addr:housenumber": "44",
+        "addr:postcode": "60200",
+        "addr:street": "Veveří",
+        "amenity": "pub",
+        "name": "M13 Darts Club",
+        "opening_hours": "Mo-Sa 16:00-02:00",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.5982089,
+          49.2026283
+        ]
+      },
+      "id": "node/4180626918"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4231856489",
+        "amenity": "pub",
+        "contact:email": "info@ponava.cafe",
+        "contact:phone": "+420 739519650",
+        "description": "Vege Bio lokal",
+        "diet:vegan": "yes",
+        "diet:vegetarian": "yes",
+        "internet_access": "wlan",
+        "name": "Ponava",
+        "opening_hours": "Mo-Sa 15:00-23:00; Su 13:00-18:00",
+        "organic": "yes",
+        "outdoor_seating": "yes",
+        "smoking": "outside",
+        "website": "http://ponava.cafe",
+        "wheelchair": "limited"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.6101276,
+          49.2049064
+        ]
+      },
+      "id": "node/4231856489"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4368030331",
+        "amenity": "pub",
+        "name": "Viking Pub"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.6005116,
+          49.1895658
+        ]
+      },
+      "id": "node/4368030331"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4462543139",
+        "addr:city": "Brno",
+        "addr:housenumber": "17",
+        "addr:postcode": "60200",
+        "addr:street": "Grohova",
+        "amenity": "pub",
+        "name": "JBM Brew Lab Pub",
+        "opening_hours": "Mo-Su 16:00-00:00",
+        "payment:maestro": "yes",
+        "payment:mastercard": "yes",
+        "payment:visa": "yes",
+        "payment:visa_debit": "yes",
+        "payment:visa_electron": "yes",
+        "phone": "+420 777 306 982",
+        "smoking": "no",
+        "website": "www.jbmbrewlab.cz",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.5959758,
+          49.2005927
+        ]
+      },
+      "id": "node/4462543139"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4512111848",
+        "addr:city": "Brno",
+        "addr:housenumber": "14a",
+        "addr:postcode": "60200",
+        "addr:street": "Moravské náměstí",
+        "amenity": "pub",
+        "internet_access": "wlan",
+        "name": "U Tekutého chleba",
+        "opening_hours": "Mo-Su 16:00-24:00",
+        "phone": "+420 724 112 928",
+        "smoking": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.6065515,
+          49.1998835
+        ]
+      },
+      "id": "node/4512111848"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4581824422",
+        "amenity": "pub",
+        "name": "U Zvonu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.6178083,
+          49.1864159
+        ]
+      },
+      "id": "node/4581824422"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4581825389",
+        "amenity": "pub",
+        "name": "Černohorská oáza"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.6174518,
+          49.1861283
+        ]
+      },
+      "id": "node/4581825389"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4585809593",
+        "amenity": "pub",
+        "name": "Pivnice Akord",
+        "name:cs": "Pivnice Akord"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.6265612,
+          49.1913858
+        ]
+      },
+      "id": "node/4585809593"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4823302943",
+        "addr:city": "Brno",
+        "addr:housenumber": "3",
+        "addr:postcode": "60200",
+        "addr:street": "Poštovská",
+        "air_conditioning": "yes",
+        "amenity": "pub",
+        "diet:vegetarian": "yes",
+        "food": "yes",
+        "indoor_seating": "yes",
+        "name": "Axiom Pub",
+        "opening_hours": "Mo-Th 15:00-24:00, Fr 15:00-02:00, Sa 12:00-02:00, Su 14:00-23:00",
+        "outdoor_seating": "pedestrian_zone",
+        "smoking": "no",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.6101448,
+          49.1949771
+        ]
+      },
+      "id": "node/4823302943"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4882172002",
+        "amenity": "pub",
+        "name": "Sportbar Morenda",
+        "opening_hours": "Su-Th 13:00-23:00; Fr,Sa 13:00-24:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.5995724,
+          49.1834399
+        ]
+      },
+      "id": "node/4882172002"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4882172162",
+        "amenity": "pub",
+        "name": "Pivnice na Oltecu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.5987235,
+          49.1886598
+        ]
+      },
+      "id": "node/4882172162"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4919106022",
+        "amenity": "pub",
+        "name": "Starobrněnská Hospůdka",
+        "name:cs": "Starobrněnská Hospůdka",
+        "opening_hours:signed": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.6151912,
+          49.1725488
+        ]
+      },
+      "id": "node/4919106022"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5200597989",
+        "amenity": "pub",
+        "internet_access": "wlan",
+        "internet_access:fee": "no",
+        "leisure": "sports_centre",
+        "name": "Hravý bar",
+        "sport": "table_tennis",
+        "wheelchair": "limited"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.5970936,
+          49.1892857
+        ]
+      },
+      "id": "node/5200597989"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5316219756",
+        "alt_name": "U dědka",
+        "amenity": "pub",
+        "name": "Občerstvení Na hřišti"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.5880387,
+          49.1807971
+        ]
+      },
+      "id": "node/5316219756"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5353068995",
+        "amenity": "pub",
+        "name": "Tres gallos",
+        "opening_hours": "24/7",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.6121419,
+          49.1961231
+        ]
+      },
+      "id": "node/5353068995"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5542858492",
+        "amenity": "pub",
+        "name": "Dandy bar",
+        "opening_hours": "Mo-Fr 13:00-22:00; Sa,Su 14:00-22:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.5999341,
+          49.1821382
+        ]
+      },
+      "id": "node/5542858492"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5542858584",
+        "amenity": "pub",
+        "name": "Hostinec U Franty"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.6347314,
+          49.2128286
+        ]
+      },
+      "id": "node/5542858584"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5903902631",
+        "amenity": "pub",
+        "name": "U Zelené žáby",
+        "opening_hours": "Mo-Fr 10:00-22:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.6221416,
+          49.1939352
+        ]
+      },
+      "id": "node/5903902631"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6011911654",
+        "amenity": "pub",
+        "name": "Na Houpačce"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.6172298,
+          49.2012216
+        ]
+      },
+      "id": "node/6011911654"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6027350874",
+        "amenity": "pub",
+        "name": "Tembo",
+        "opening_hours": "24/7"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.6008628,
+          49.203011
+        ]
+      },
+      "id": "node/6027350874"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6053336987",
+        "amenity": "pub",
+        "name": "Hospoda Za Homerunem",
+        "opening_hours": "Mo-Fr 15:00-21:00",
+        "outdoor_seating": "yes",
+        "phone": "+420 608 676 615"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.5888591,
+          49.2026179
+        ]
+      },
+      "id": "node/6053336987"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6292048436",
+        "addr:city": "Brno",
+        "addr:housenumber": "11",
+        "addr:postcode": "60200",
+        "addr:street": "Dominikánská",
+        "amenity": "pub",
+        "email": "pubudvoupratel@gmail.com",
+        "name": "Pub U Dvou přátel",
+        "opening_hours": "Mo-Su 16:00-01:00",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.6062819,
+          49.1931406
+        ]
+      },
+      "id": "node/6292048436"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6421751193",
+        "amenity": "pub",
+        "name": "U Vašinů craft beer & food",
+        "opening_hours": "Mo-Fr 16:30-22:00+",
+        "outdoor_seating": "yes",
+        "phone": "+420 774 215 243",
+        "takeaway": "yes",
+        "website": "http://uvasinu.cz/",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.6022972,
+          49.2074472
+        ]
+      },
+      "id": "node/6421751193"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6716524013",
+        "amenity": "pub",
+        "email": "info@hospudkabrno.cz",
+        "name": "Hospůdka Anenská",
+        "opening_hours": "Mo-Th 10:30-22:00; Fr 10:30-23:00",
+        "outdoor_seating": "yes",
+        "payment:maestro": "yes",
+        "payment:mastercard": "yes",
+        "payment:visa": "yes",
+        "payment:visa_debit": "yes",
+        "payment:visa_electron": "yes",
+        "phone": "+420 774792367",
+        "website": "https://www.hospudkabrno.cz/",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.6034396,
+          49.191078
+        ]
+      },
+      "id": "node/6716524013"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7145112250",
+        "amenity": "pub",
+        "name": "Zlatý grál",
+        "opening_hours": "Mo-Fr 11:00-16:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.6249962,
+          49.1911184
+        ]
+      },
+      "id": "node/7145112250"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7205553364",
+        "addr:city": "Brno",
+        "addr:housenumber": "2574/1",
+        "addr:postcode": "61600",
+        "addr:street": "Makovského náměstí",
+        "amenity": "pub",
+        "level": "1",
+        "name": "Manhattan Pub",
+        "opening_hours": "Mo-Th 15:00-03:00, Fr,Sa 15:00-04:00, Su 15:00-02:00",
+        "wheelchair": "limited"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.5765794,
+          49.2184337
+        ]
+      },
+      "id": "node/7205553364"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7255870520",
+        "addr:city": "Brno",
+        "addr:housenumber": "903/83",
+        "addr:place": "Židenice",
+        "addr:postcode": "61500",
+        "addr:street": "Táborská",
+        "addr:streetnumber": "83",
+        "amenity": "pub",
+        "name": "U zlámané grešle",
+        "opening_hours": "Mo-Su 08:00-22:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.6453538,
+          49.1951397
+        ]
+      },
+      "id": "node/7255870520"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7772019054",
+        "addr:city": "Brno",
+        "addr:housenumber": "33",
+        "addr:postcode": "61300",
+        "addr:street": "Jugoslávská",
+        "amenity": "pub",
+        "brewery": "Pilsner_Urquell",
+        "name": "U Vodičků",
+        "payment:cash": "yes",
+        "payment:credit_cards": "yes",
+        "smoking": "outside"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.6222658,
+          49.2056987
+        ]
+      },
+      "id": "node/7772019054"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7797605231",
+        "amenity": "pub",
+        "name": "U Svatých",
+        "opening_hours": "Mo-Su 13:00-24:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.5974593,
+          49.1887384
+        ]
+      },
+      "id": "node/7797605231"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8656587671",
+        "addr:city": "Brno",
+        "addr:housenumber": "14",
+        "addr:postcode": "63900",
+        "addr:street": "Renneská třída",
+        "amenity": "pub",
+        "contact:email": "pivo7bou@gmail.com",
+        "name": "Pivo7bou",
+        "opening_hours": "Mo-Th 15:00-21:00; Fr 15:00-22:00; Sa 15:00-21:00; Su 15:00-20:00",
+        "phone": "+420 603 231 366",
+        "website": "https://pivo7bou.business.site/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.6004361,
+          49.1825933
+        ]
+      },
+      "id": "node/8656587671"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9375745348",
+        "amenity": "pub",
+        "name": "Hladinka a šnyt",
+        "website": "https://www.facebook.com/hladinkaasnyt/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.6019126,
+          49.201791
+        ]
+      },
+      "id": "node/9375745348"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9501140798",
+        "amenity": "pub",
+        "microbrewery": "yes",
+        "name": "Harry",
+        "outdoor_seating": "no",
+        "takeaway": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.6103444,
+          49.194848
+        ]
+      },
+      "id": "node/9501140798"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9588440435",
+        "amenity": "pub",
+        "contact:facebook": "https://www.facebook.com/graselbrno/",
+        "email": "info@graselpub.cz",
+        "mobile": "+420 777 752 452",
+        "name": "Grasel",
+        "opening_hours": "Tu-Fr 15:00-22:00; Sa 15:00-24:00; Su 00:00-01:00,15:00-22:00",
+        "payment:maestro": "yes",
+        "payment:mastercard": "yes",
+        "payment:visa": "yes",
+        "payment:visa_debit": "yes",
+        "payment:visa_electron": "yes",
+        "takeaway": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.6067092,
+          49.1925133
+        ]
+      },
+      "id": "node/9588440435"
+    }
+  ]
+}
