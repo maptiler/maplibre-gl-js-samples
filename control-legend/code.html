@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Display a map legend control to toggle layers visualization</title>
+  <script src="https://cdn.maptiler.com/maplibre-gl-js/v2.2.0-pre.2/maplibre-gl.js"></script>
+  <link href="https://cdn.maptiler.com/maplibre-gl-js/v2.2.0-pre.2/maplibre-gl.css" rel="stylesheet" />
+  <link href='https://watergis.github.io/maplibre-gl-legend/maplibre-gl-legend.css' rel='stylesheet' />
+  <script src="https://watergis.github.io/maplibre-gl-legend/maplibre-gl-legend.js"></script>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    #map {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div id="map"></div>
+  <script>
+      const key = 'YOUR_MAPTILER_API_KEY_HERE';
+      const map = new maplibregl.Map({
+        container: 'map', // container id
+        style: `https://api.maptiler.com/maps/streets/style.json?key=${key}`, // style URL
+        center: [16.611342, 49.197304], // starting position [lng, lat]
+        zoom: 11, // starting zoom
+      });
+      map.addControl(new maplibregl.NavigationControl(), 'top-right');
+      map.on('load', () => {
+        const targets = {
+          landcover_forestland: "Forest",
+          landcover_treeland: "Tree",
+          landcover_sand: "Sand",
+          landuse_residential: "Residential",
+          waterway_river: "River",
+          road_minor: "Road minor",
+          road_secondary_tertiary: "Road secondary",
+          road_trunk_primary: "Road primary",
+          road_motorway: "Road motoway",
+          building: "Building",
+          airport_label: "Airport"
+        };
+        const options = {
+          showDefault: true,
+          showCheckbox: true,
+          onlyRendered: true,
+          reverseOrder: true
+        };
+        map.addControl(new watergis.MaplibreLegendControl(targets, options), "bottom-left");
+      });
+  </script>
+</body>
+</html>
