@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Display an interactive choropleth map legend control</title>
+  <script src="https://cdn.maptiler.com/maplibre-gl-js/v2.2.0-pre.2/maplibre-gl.js"></script>
+  <link href="https://cdn.maptiler.com/maplibre-gl-js/v2.2.0-pre.2/maplibre-gl.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chroma-js/2.4.2/chroma.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    #map {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+    }
+    .maplibregl-ctrl-choropleth {
+      color: #333359;
+      position: relative;
+      padding: 6px 8px;
+      font-family: OpenSans Semibold, OpenSans Regular, OpenSans Italic;
+      background: white;
+      box-shadow: 0 0 15px rgb(0 0 0 / 20%);
+      border-radius: 5px;
+      bottom: 0;
+      right: 0;
+      margin: 10px;
+    }
+    .maplibregl-ctrl-choropleth h3 {
+      margin-block-start: 0;
+      margin-block-end: 0.5em;
+    }
+    .maplibregl-ctrl-choropleth ul {
+      padding: 0;
+      margin: 0;
+      clear: both;
+      flex-direction: column;
+    }
+    .maplibregl-ctrl-choropleth li {
+      display: inline-flex;
+      align-items: center;
+    }
+    .maplibregl-ctrl-choropleth li.active {
+      font-weight: 600;
+    }
+    .maplibregl-ctrl-choropleth li span {
+      display: inline-block;
+      width: 22px;
+      height: 22px;
+      cursor: pointer;
+      margin-right: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div id="map"></div>
+  <script src="legendControl.js"></script>
+  <script>
+    const vizData = {
+      "8":{"name":"Albania","population":2829741},
+      "40":{"name":"Austria","population":8932664},
+      "56":{"name":"Belgium","population":11566041},
+      "100":{"name":"Bulgaria","population":6916548},
+      "191":{"name":"Croatia","population":4036355},
+      "196":{"name":"Cyprus","population":896005},
+      "203":{"name":"Czechia","population":10701777},
+      "208":{"name":"Denmark","population":5840045},
+      "233":{"name":"Estonia","population":1330068},
+      "246":{"name":"Finland","population":5533793},
+      "250":{"name":"France","population":67439599},
+      "276":{"name":"Germany","population":83155031},
+      "300":{"name":"Greece","population":10682547},
+      "348":{"name":"Hungary","population":9730772},
+      "352":{"name":"Iceland","population":368792},
+      "372":{"name":"Ireland","population":5006907},
+      "380":{"name":"Italy","population":59257566},
+      "428":{"name":"Latvia","population":1893223},
+      "438":{"name":"Liechtenstein","population":39055},
+      "440":{"name":"Lithuania","population":2795680},
+      "442":{"name":"Luxembourg","population":634730},
+      "470":{"name":"Malta","population":516100},
+      "499":{"name":"Montenegro","population":620739},
+      "528":{"name":"Netherlands","population":17475415},
+      "578":{"name":"Norway","population":5391369},
+      "616":{"name":"Poland","population":37840001},
+      "620":{"name":"Portugal","population":10298252},
+      "642":{"name":"Romania","population":19186201},
+      "688":{"name":"Serbia","population":6871547},
+      "703":{"name":"Slovakia","population":5459781},
+      "705":{"name":"Slovenia","population":2108977},
+      "724":{"name":"Spain","population":47394223},
+      "752":{"name":"Sweden","population":10379295},
+      "756":{"name":"Switzerland","population":8667088},
+      "792":{"name":"Turkey","population":83614362},
+      "807":{"name":"North Macedonia","population":2068808}
+    };
+    function setStates() {
+      const countries = map.querySourceFeatures('statesData', {
+        sourceLayer: 'administrative',
+        filter: ['all', ['==', 'level', 0]],
+      });
+      countries.forEach(country => {
+        if(country.id && vizData[country.id]) {
+          map.setFeatureState({
+            source: 'statesData',
+            sourceLayer: 'administrative',
+            id: country.id
+          }, {
+            population: vizData[country.id].population
+          });
+        }
+      });
+      if (countries.length !== 0) {
+        map.off('data', afterLoad);
+      }
+    }
+    function afterLoad() {
+      if (map.getSource('statesData') && map.isSourceLoaded('statesData')) {
+        setStates();
+      }
+    }
+    const populationData = Object.keys(vizData).reduce((agg, id) => {
+      agg.push(vizData[id]["population"]);
+      return agg;
+    }, []);
+    //chroma equidistant scale
+    const limits = chroma.limits(populationData, 'e', 4);
+    //chroma color scale
+    const colorScale = chroma.scale(['rgba(222,235,247,1)', 'rgba(49,130,189,1)']).mode('lch').colors(5);
+    function createPaintColor(limits, colorScale){
+      const paintColor = ['case',
+        ['!=', ['to-number', ['feature-state', 'population']], 0],
+        ['step',
+          ['feature-state', 'population'],
+        ],
+        'rgba(0, 0, 0, 0)'
+      ];
+      for (let i = 1; i < limits.length; i++) {
+        paintColor[2].push(colorScale[i-1]);
+        paintColor[2].push(limits[i]);
+      }
+      paintColor[2].push(colorScale[limits.length-1]);
+      return paintColor;
+    }
+    const key = 'YOUR_MAPTILER_API_KEY_HERE';
+    const map = new maplibregl.Map({
+      container: 'map', // container id
+      style: `https://api.maptiler.com/maps/streets/style.json?key=${key}`, // style URL
+      center: [13.39, 52.51], // starting position [lng, lat]
+      zoom: 2, // starting zoom
+    });
+    map.addControl(new maplibregl.NavigationControl(), 'top-right');
+    map.on('load', function() {
+      map.addSource('statesData', {
+        type: 'vector',
+        url: `https://api.maptiler.com/tiles/countries/tiles.json?key=${key}`
+      });
+
+      // Find the id of the first symbol layer in the map style
+      const layers = map.getStyle().layers;
+      let firstSymbolId;
+      for (let i = 0; i < layers.length; i++) {
+        if (layers[i].type === 'symbol') {
+          firstSymbolId = layers[i].id;
+          break;
+        }
+      }
+
+      map.addLayer(
+        {
+          'id': 'countries',
+          'source': 'statesData',
+          'source-layer': 'administrative',
+          'type': 'fill',
+          'filter': ['==', 'level', 0],
+          'paint': {
+              'fill-color': createPaintColor(limits, colorScale),
+              'fill-opacity': 1,
+              'fill-outline-color': '#000'
+          }
+        },
+        firstSymbolId
+      );
+      map.addControl(new choroplethLegendControl({layerId: 'countries', limits: limits, colorScale: colorScale}), 'bottom-left');
+    });
+    map.on('data', afterLoad);
+  </script>
+</body>
+</html>
