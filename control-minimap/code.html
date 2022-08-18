@@ -19,6 +19,10 @@
       bottom: 0;
       width: 100%;
     }
+    .maplibregl-ctrl-minimap {
+      border: 4px solid rgba(255, 255, 255, 0.8);
+      border-radius: 4px;
+    }
   </style>
 </head>
 <body>
@@ -34,9 +38,7 @@
       map.addControl(new maplibregl.NavigationControl(), 'top-right');
       
       map.on('load', () => {
-        map.addControl(new minimapControl({
-          style: `https://api.maptiler.com/maps/basic-v2/style.json?key=${key}`
-        }), 'bottom-left');
+        map.addControl(new minimapControl(), 'bottom-left');
       });
       
   </script>
