@@ -63,8 +63,9 @@
           map.on('click', 'polygons', function (e) {
             new maplibregl.Popup()
               .setLngLat(e.lngLat)
-              .setHTML('<h3>' + "Cat pack name" + '</h3><p>' + e.features[0].properties.name+ '</p><h3>' +
-                      '<h3>' + "Chef cat name" + '</h3><p>' + e.features[0].properties.chef + '</p><h3>')
+              .setHTML('<h3>' + "Cat pack name" + '</h3><p>' + e.features[0].properties.name+ '</p>' +
+                      '<h3>' + "Chef cat name" + '</h3><p>' + e.features[0].properties.chef + '</p>' +
+                      '<h3>' + "Number of pack members" + '</h3><p>' + e.features[0].properties.members + '</p>')
               .addTo(map);
           });
         });
