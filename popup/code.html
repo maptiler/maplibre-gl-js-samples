@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Pop-ups</title>
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+    <script src="https://cdn.maptiler.com/maplibre-gl-js/v2.2.0-pre.2/maplibre-gl.js"></script>
+    <link href="https://cdn.maptiler.com/maplibre-gl-js/v2.2.0-pre.2/maplibre-gl.css" rel="stylesheet" />
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        #map {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+    <script>
+        const key =  'YOUR_MAPTILER_API_KEY_HERE';
+        const map = new maplibregl.Map({
+            container: 'map',
+            style: `https://api.maptiler.com/maps/streets-v2/style.json?key=${key}`,
+            center: [-43.2067,-22.8779],
+            zoom: 11,
+            hash: true
+        });
+        map.on('load', function() {
+          map.addSource('cat_teritories', {
+          'type': 'geojson',
+          'data': {"type": "FeatureCollection", "features": [{"type": "Feature", "id": "3cc980e8-36d7-4627-88e2-f08c6ea9a779", "geometry": {"type": "Polygon", "coordinates": [[[-43.21085457, -22.89878673], [-43.19582714, -22.89273875], [-43.18959719, -22.89288973], [-43.18000828, -22.89721261], [-43.17660819, -22.8988516], [-43.17554255, -22.9023155], [-43.17115535, -22.9107269], [-43.17553819, -22.91666846], [-43.17111297, -22.92112489], [-43.1735116, -22.9338488], [-43.16934375, -22.93843666], [-43.17515867, -22.94444358], [-43.17893453, -22.94220773], [-43.18059033, -22.94863857], [-43.18375859, -22.9490747], [-43.19122743, -22.94980866], [-43.19479578, -22.95123469], [-43.19907517, -22.95699946], [-43.20195739, -22.95937852], [-43.20968361, -22.96029891], [-43.21251473, -22.95740802], [-43.21707206, -22.95027062], [-43.22426359, -22.94246139], [-43.2226215, -22.93919938], [-43.21628747, -22.93594418], [-43.20982445, -22.93388897], [-43.20872391, -22.93064799], [-43.21031365, -22.92461922], [-43.21085457, -22.89878673]]]}, "properties": {"chef": "Mrs. Noris", "name": "Hogwards cats", "members": "16"}}, {"type": "Feature", "id": "c9c3a81a-c095-400b-bf1f-bd7ca0408133", "geometry": {"type": "Polygon", "coordinates": [[[-43.22426359, -22.94246139], [-43.2226215, -22.93919938], [-43.21628747, -22.93594418], [-43.20982445, -22.93388897], [-43.20872391, -22.93064799], [-43.21031365, -22.92461922], [-43.23091481, -22.92206162], [-43.23313584, -22.9247983], [-43.23409803, -22.93124316], [-43.23771124, -22.92963326], [-43.2407343, -22.93285878], [-43.25090215, -22.94138248], [-43.26751308, -22.95670738], [-43.25950269, -22.95560333], [-43.25148296, -22.95347096], [-43.24801121, -22.95532904], [-43.24306501, -22.95366148], [-43.24304818, -22.94992114], [-43.23844286, -22.95061206], [-43.22426359, -22.94246139]]]}, "properties": {"chef": "Puss in Boots", "name": "Senoritas", "members": "40"}}, {"type": "Feature", "id": "acd53300-e5b6-496b-bf0c-60ae4ef0b4d2", "geometry": {"type": "Polygon", "coordinates": [[[-43.23091481, -22.92206162], [-43.21031365, -22.92461922], [-43.21085457, -22.89878673], [-43.21654049, -22.88774056], [-43.22072329, -22.88906562], [-43.22741689, -22.88444279], [-43.24021021, -22.89179034], [-43.24756875, -22.90129023], [-43.23091481, -22.92206162]]]}, "properties": {"chef": "Garfield", "name": "Jon Arbuckles family", "members": "3"}}]}
+          });
+
+          map.addLayer({
+            'id': 'polygons',
+            'type': 'fill',
+            'source': 'cat_teritories', // reference the data source
+            'layout': {},
+            'paint': {
+            'fill-color': '#FFAA01', // orange color fill
+            'fill-opacity': 0.5
+            }
+          });
+            
+          // outline of polygons
+          map.addLayer({
+            'id': 'outline',
+            'type': 'line',
+            'source': 'cat_teritories',
+            'layout': {},
+            'paint': {
+            'line-color': '#F3A040', // orange outline
+            'line-width': 2
+            }
+          });
+
+          map.on('click', 'polygons', function (e) {
+            new maplibregl.Popup()
+              .setLngLat(e.lngLat)
+              .setHTML('<h3>' + "Cat pack name" + '</h3><p>' + e.features[0].properties.name+ '</p><h3>' +
+                      '<h3>' + "Chef cat name" + '</h3><p>' + e.features[0].properties.chef + '</p><h3>')
+              .addTo(map);
+          });
+        });
+
+        map.on('error', function(err) {
+            throw new Error("To load the map, you must replace YOUR_MAPTILER_API_KEY_HERE first, see README");
+        });       
+    </script>
+</body>
+</html>
