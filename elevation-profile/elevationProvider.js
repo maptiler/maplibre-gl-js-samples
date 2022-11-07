@@ -25,7 +25,7 @@ class ElevationProvider {
   }
 
   async fetchTile(tileIndex) {
-      const url = `https://api.maptiler.com/tiles/terrain-rgb/${tileIndex.zoom}/${tileIndex.x}/${tileIndex.y}.png?key=${this.apiKey}`
+      const url = `https://api.maptiler.com/tiles/terrain-rgb-v2/${tileIndex.zoom}/${tileIndex.x}/${tileIndex.y}.png?key=${this.apiKey}`
       const image = await this.loadImage(url);
       return this.getImageData(image);
   }

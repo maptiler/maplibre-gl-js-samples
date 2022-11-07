@@ -38,7 +38,7 @@
       map.on('load', () => {
         map.addSource("terrain", {
           "type": "raster-dem",
-          "url": `https://api.maptiler.com/tiles/terrain-rgb/tiles.json?key=${key}`
+          "url": `https://api.maptiler.com/tiles/terrain-rgb-v2/tiles.json?key=${key}`
         });
         map.setTerrain({
           source: "terrain"
