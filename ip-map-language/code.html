@@ -67,9 +67,12 @@
       }
     }
     function setMapLanguage(map, language) {
-      map.setLayoutProperty('country_1', 'text-field', ['get','name:' + language]);
-      map.setLayoutProperty('country_2', 'text-field', ['get','name:' + language]);  
-      map.setLayoutProperty('country_3', 'text-field', ['get','name:' + language]);
+      // Set the new language to layers
+      map.setLayoutProperty('continent', 'text-field', ['get','name:' + language]);
+      map.setLayoutProperty('country', 'text-field', ['get','name:' + language]);
+      map.setLayoutProperty('state', 'text-field', ['get','name:' + language]);
+      map.setLayoutProperty('city', 'text-field', ['get','name:' + language]);
+      map.setLayoutProperty('town', 'text-field', ['get','name:' + language]);
     }
     map.on('load', async () => {
       const geolocationIP = await getUserLocationByIP();

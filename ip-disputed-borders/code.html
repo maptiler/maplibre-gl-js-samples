@@ -43,18 +43,9 @@
       if (!claimed_by_countries.includes(country_code)){ //if the country code is not in the list of disputed ones, do nothing and return
         return;
       }
-      if (map.getLayer("admin_disputed")) { //for styles based on the basic style
-        const admin_disputed = map.getLayer("admin_disputed");
-        map.setFilter("admin_disputed", [...admin_disputed.filter, ["==", "claimed_by", country_code]]);
-      } else if ( map.getLayer("boundary_2_z5_disputed")) { //for styles based on the streets style
-        const boundary_disputed = map.getLayer("boundary_2_z5_disputed");
-        const boundary_disputed_maritime = map.getLayer("boundary_2_z5_disputed_maritime");
-        const boundary_2_z0_4_disputed = map.getLayer("boundary_2_z0-4_disputed");
-        const boundary_2_z0_4_disputed_maritime = map.getLayer("boundary_2_z0-4_disputed_maritime");
-        map.setFilter("boundary_2_z5_disputed", [...boundary_disputed.filter, ["==", "claimed_by", country_code]]);
-        map.setFilter("boundary_2_z5_disputed_maritime", [...boundary_disputed_maritime.filter, ["==", "claimed_by", country_code]]);
-        map.setFilter("boundary_2_z0-4_disputed", [...boundary_2_z0_4_disputed.filter, ["==", "claimed_by", country_code]]);
-        map.setFilter("boundary_2_z0-4_disputed_maritime", [...boundary_2_z0_4_disputed_maritime.filter, ["==", "claimed_by", country_code]]);
+      if ( map.getLayer("border_disputed")) {
+        const boundary_disputed = map.getLayer("border_disputed");
+        map.setFilter("border_disputed", [...boundary_disputed.filter, ["==", "claimed_by", country_code]]);
       }
     }
     map.on('load', async () => {
